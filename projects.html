@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Daniel Won | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="icon" href="assets/logo.PNG" type="image/png">
+    <script src="home.js"></script>
+  </head>
+  <body>
+    <nav class="navbar" id="nav-bar">
+      <a href="index.html" id="logo">
+        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 465.75 414">
+          <title>Logo</title><path d="M117,342c0,106.76,80.82,194.65,184.62,205.8a20.18,20.18,0,0,0,22.38-20V156.25a20.18,20.18,0,0,0-22.38-20.05C197.82,147.35,117,235.24,117,342Z" transform="translate(-117 -135)"/><rect x="258.75" width="51.75" height="414" rx="20.17"/><rect x="336.38" y="198" width="51.75" height="216" rx="20.17"/><rect x="414" width="51.75" height="414" rx="20.17"/>
+        </svg>
+      </a>
+      <a href="javascript:void(0)" id="menu-icon" onclick="icon_click()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 381 344">
+          <title>Menu</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><rect width="381" height="62.55" rx="27.5"/><rect y="140.72" width="381" height="62.55" rx="27.5"/><rect y="281.45" width="381" height="62.55" rx="27.5"/></g></g>
+        </svg>
+      </a>
+      <span class="menu-list">
+        <a href="index.html" class="menu-item"> home </a>
+        <a href="projects.html" class="menu-item"> projects </a>
+        <a href="#" class="menu-item"> about </a>
+        <a href="#" class="menu-item"> contact </a>
+        <a href="javascript:void(0)" class="menu-item" id="nightmode" onclick="toggleNightMode()">
+          night mode
+        </a>
+    </span>
+    </nav>
+
+    <header class="title-text">
+      <h1 id="projectpage"> Projects</h1>
+    </header>
+
+    <div class="row">
+      <span class="project-thumbnail">
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.63 144.77"><title>illustration</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><rect x="-8.88" y="62.07" width="100.29" height="22.46" transform="translate(-42.85 72.39) rotate(-60)"/><path d="M83,1.5a11.23,11.23,0,0,0-15.2,3.9h0l-.13.23h0l-5.62,9.72L81.51,26.57l5.62-9.72.13-.23h0A11.24,11.24,0,0,0,83,1.5Z"/><polygon points="0 144.77 20.92 131.52 1.02 120.03 0 144.77"/></g></g></svg>
+        </a>
+        illustrations
+      </span>
+      <span class="project-thumbnail">
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 162.04 145.27"><title>layout</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path d="M0,23.37v121.9s18.9-45.72,76.59,0V17S37.08-25.2,0,23.37Z"/><path d="M85.45,17V145.27c57.68-45.72,76.59,0,76.59,0V23.37C125-25.2,85.45,17,85.45,17Z"/></g></g></svg>
+        </a>
+        layout
+      </span>
+    </div>
+    <div class="row">
+      <span class="project-thumbnail">
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122 145"><title>poster</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path d="M116.2,0H5.8A5.8,5.8,0,0,0,0,5.8V139.2A5.8,5.8,0,0,0,5.8,145H116.2a5.8,5.8,0,0,0,5.8-5.8V5.8A5.8,5.8,0,0,0,116.2,0ZM31.5,18A12.5,12.5,0,1,1,19,30.5,12.5,12.5,0,0,1,31.5,18ZM14,135,43.38,67,61,92.33,78.62,51,108,135Z"/></g></g></svg>
+        </a>
+        posters
+      </span>
+      <span class="project-thumbnail">
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 154 154"><title>engineering</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path d="M154,85.8V69.93l-14.76-1.57a62.36,62.36,0,0,0-11.07-27.82l9.5-11.76L126.44,17.55,114.9,26.87A62.53,62.53,0,0,0,87.4,15L85.8,0H69.93L68.36,14.76A62.36,62.36,0,0,0,40.54,25.83l-11.76-9.5L17.55,27.56,26.87,39.1A62.53,62.53,0,0,0,15,66.6L0,68.2V84.07l14.76,1.57a62.36,62.36,0,0,0,11.07,27.82l-9.5,11.76,11.23,11.23,11.54-9.32A62.53,62.53,0,0,0,66.6,139l1.6,15H84.07l1.57-14.76a62.36,62.36,0,0,0,27.82-11.07l11.76,9.5,11.23-11.23-9.32-11.54A62.53,62.53,0,0,0,139,87.4ZM77,87.89A10.89,10.89,0,1,1,87.89,77,10.88,10.88,0,0,1,77,87.89Z"/></g></g></svg>
+        </a>
+        engineering
+      </span>
+    </div>
+    <div class="row">
+      <span class="project-thumbnail">
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 195.02 115"><title>userinterface</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path d="M180.25,45.06h0A30.29,30.29,0,0,0,150,14.78H45.06A30.28,30.28,0,0,0,14.78,45.06h0A30.29,30.29,0,0,0,45.06,75.35h93.38l2-38.93,29.09,31.77A30.23,30.23,0,0,0,180.25,45.06Z"/><polygon points="143.81 115 160.32 91.77 187.85 99.17 146.9 54.44 143.81 115"/><path d="M7.39,45.06A37.71,37.71,0,0,1,45.06,7.39H150a37.65,37.65,0,0,1,24.53,66.24l5,5.45A45,45,0,0,0,150,0H45.06a45.07,45.07,0,0,0,0,90.13h92.62l.38-7.39h-93A37.72,37.72,0,0,1,7.39,45.06Z"/></g></g></svg>
+        </a>
+        user interface
+      </span>
+      <span class="project-thumbnail">
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160.73 73"><title>program</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polygon points="18.57 35.22 53.79 14.88 53.79 4.16 0 35.22 53.79 66.28 53.79 55.55 18.57 35.22"/><polygon points="142.16 35.22 106.94 14.88 106.94 4.16 160.73 35.22 106.94 66.28 106.94 55.55 142.16 35.22"/><polygon points="71.32 73 98.99 0 89.41 0 61.74 73 71.32 73"/></g></g></svg>
+        </a>
+        programs
+      </span>
+    </div>
+  </body>
+
+</html>
