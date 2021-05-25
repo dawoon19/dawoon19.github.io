@@ -3,15 +3,15 @@
 
 //General page formatting
 :root{
-  --bg-color: #ffce3b;
+  --bg-color: rgba(255,206,59); //#ffce3b
   --primary-color:black;
-  --secondary-color:#212d33;
+  --secondary-color:rgba(33,45,51); //#212d33
   --neg-primary-color:white;
 }
 
 body{
   font-family: 'Josefin Sans', sans-serif;
-  overflow: hidden;
+  overflow: scroll;
   background-color:var(--bg-color);
   background-image:url()
 }
@@ -19,6 +19,7 @@ body{
 header{
   text-align:center;
   color:var(--primary-color);
+  z-index:0;
 }
 
 h1{
@@ -30,7 +31,7 @@ h1{
 //Page title formatting + animation
 #name{
   font-size:60px;
-  padding-top:50vh;
+  padding-top:40vh;
   animation-name: home-start-title;
   animation-duration: 4s;
 }
@@ -44,8 +45,8 @@ h1{
 }
 
 @keyframes home-start-title{
-  from{opacity: 0%;padding-top:62vh;}
-  to{opacity:100%;padding-top:50vh;}
+  from{opacity: 0%;padding-top:52vh;}
+  to{opacity:100%;padding-top:40vh;}
 }
 
 @keyframes project-start-title{
@@ -59,7 +60,7 @@ h1{
   margin-top:-25px;
   font-weight: 100;
   font-size: 30px;
-  padding-bottom:50vh;
+  padding-bottom:5vh;
   bottom:0px;
   animation-name: home-start-desc;
   animation-duration: 8s;
@@ -72,6 +73,27 @@ h1{
   40%{opacity: 100%;}
   80%{opacity: 100%;}
   100%{opacity: 0%;}
+}
+
+#portfolio-button{
+  background-color:var(--primary-color);
+  color: var(--bg-color);
+  font-size: 15px;
+  font-weight:500;
+  text-decoration:none;
+  padding-top:15px;
+  padding-bottom:15px;
+  padding-left:20px;
+  padding-right:20px;
+  border-radius:30px;
+  animation-name: project-start-content;
+  animation-duration: 8s;
+  margin-top:50px;
+  margin-bottom:10px;
+  transition:opacity 0.3s;
+}
+#portfolio-button:hover{
+  opacity:50%;
 }
 
 //II. Projects
@@ -116,22 +138,126 @@ h1{
   100%{opacity: 100%;}
 }
 
+//III. Portfolio Sections
+.portfolio{
+  color:var(--primary-color);
+  margin-top:10vh;
+  margin-bottom:10vh;
 
-//
-// #mode-switch{
-//   position:relative;
-//   display: inline-block;
-//   width:10%;
-//   background-color:var(--primary-color);
-// }
+  width:100%;
+  text-align: center;
+  animation-name: project-start-content;
+  animation-duration: 6s;
+}
+.portfolio-thumbnail{
+  width: 40%;
+  border-radius:10px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+  transition:width 0.3s;
+}
+.portfolio-thumbnail:hover{
+  width:100%;
+}
+.caption-title{
+  font-weight:600;
+  font-size:30px;
+  text-align:center;
+}
+.caption-data{
+  font-weight:300;
+  font-size:20px;
+  text-align:center;
+
+  margin-left:20%;
+  margin-right:20%;
+}
+.caption{
+  font-weight:200;
+  text-align:center;
+  font-size:15px;
+  line-height: 20px;
+
+  margin-left:30%;
+  margin-right:30%;
+  text-align: center,justify;
+
+}
+.caption-button{
+  background-color: var(--primary-color);
+  color:var(--bg-color);
+  padding-top:10px;
+  padding-bottom:10px;
+  padding-left:15px;
+  padding-right:15px;
+  margin-top:5px;
+  width:100px;
+  font-size: 15px;
+  font-family:"Josefin Sans",sans-serif;
+  transition: opacity 0.3s;
+  border-radius:20px;
+  border:none;
+  justify-content:center;
+  outline-color:transparent;
+}
+.caption-button:hover{
+  opacity:30%;
+}
+.caption-button.open{
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+.caption-button.open:hover{
+  background-color:var(--primary-color);
+}
+.caption-button.open{
+  position:relative;
+  top:10px;
+  display: block;
+  animation-name:caption-on;
+  animation-duration:1s;
+}
+
+.caption-button.close{
+  position:relative;
+  top:0px;
+  display: block;
+  animation-name:caption-off;
+  animation-duration:1s;
+}
+
+@keyframes caption-on{
+  from{opacity:0%; top: 0px;}
+  to{opacity:100%; top:10px;}
+}
+
+@keyframes caption-off{
+  from{opacity:100%}
+  to{opacity:0%;display:none;}
+}
+
+
 
 //navigation bar format, responsive design, animations
+#nav-bar{
+  background-image:linear-gradient(0deg,transparent,var(--bg-color));
+  position:fixed;
+  top:0;
+  right:0;
+  width:100%;
+  height:75px;
+  z-index:1;
+}
+
+#nav-bar .menu-list{
+  float:right;
+}
+
 #logo{
   fill:var(--primary-color);
   width:20px;
   float:left;
   display:block;
-  margin-top:10px;
+  margin-top:15px;
   margin-left:15px;
   transition: opacity 0.3s;
 }
@@ -140,26 +266,15 @@ h1{
   opacity:30%;
 }
 
-#nav-bar{
-  background-color:transparent;
-  position:sticky;
-  margin-top:15px;
-  padding-right:15px;
-  width:100%;
-}
-
-#nav-bar .menu-list{
-  float:right;
-}
-
 .menu-item{
   float:left;
   text-decoration:none;
   text-align:center;
-  padding-left: 25px;
+  padding-left:25px;
   padding-right:25px;
   padding-top: 18px;
   padding-bottom: 18px;
+  margin:10px;
   font-size:15px;
   font-weight:100;
   color:var(--primary-color);
@@ -188,7 +303,8 @@ h1{
   .menu-list{
     display:none;
     background-color:rgba(0,0,0,0.75);
-    border-radius:10px;
+
+    border-radius:20px;
   }
 
   .title-text.off{
@@ -206,8 +322,8 @@ h1{
     height:15px;
     float:right;
     display:block;
-    margin-top:0px;
-    margin-right:10px;
+    margin-top:2px;
+    margin-right:15px;
     padding:15px;
     transition: opacity 0.3s;
     &:hover{
@@ -265,9 +381,9 @@ h1{
   }
 
   .navbar.on #menu-icon{
-    position:absolute;
-    top:0;
-    right:15px;
+    // position:absolute;
+    // top:0;
+    // right:15px;
     fill:var(--bg-color);
     background-color: var(--primary-color);
     border-radius:30px;
