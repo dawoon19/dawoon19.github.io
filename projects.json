@@ -1,0 +1,65 @@
+[
+    [
+        {"id": "softproj0","title": "Project Lore", "org":"hello:world Hackathon 2021", "photo": "ProjectLoreThumbnail.png", 
+        "link":"https://devpost.com/software/research-health", "linkType":"devpost",
+        "desc":"Evidence-based healthcare web app that provides accurate medical advice via research articles annotated by verified users", 
+        "isDesign": true, "isDev": true, "categories": ["UI/UX", "Front End"],"tools": ["Figma, React, CSS"]},
+
+        {"id": "softproj1","title": "Barracuda Technologies", "org":"Web Development at Berkeley", "photo": "BarraThumbnail.png", 
+            "link":"https://drive.google.com/file/d/1bn2ytyhVF_46TVP-_mFIKQIgCPUSo8wM/view?usp=sharing", "linkType":"n/a",
+            "desc":"Revamped UI and UX design for website of Barracuda Technologies, a startup that converts agri-waste into usable, natural fibers", 
+            "isDesign": true, "isDev": false, "categories": ["UI/UX"],
+            "tools": ["Figma"]},
+
+        {"id": "softproj2","title": "Launchparty", "org":"Web Development at Berkeley", "photo": "LaunchpartyThumbnail.png", 
+            "link":"https://drive.google.com/file/d/1bn2ytyhVF_46TVP-_mFIKQIgCPUSo8wM/view?usp=sharing", "linkType":"n/a",
+            "desc":"Worked on design and responsive front-end for various pages for crowdfunding startup Launchparty", 
+            "isDesign": true, "isDev": true, "categories": ["UI/UX", "Front End"],
+            "tools": ["Figma"]},
+
+        {"id": "softproj3","title": "AR for Healthcare", "org":"FHL Vive Center", "photo": "ARHealthThumbnail.png", 
+            "link":"", "linkType":"n/a",
+            "desc":"Currently developing MVP for AR iOS research project promoting exercise for children in the UCSF hospital",
+            "isDesign": false, "isDev": true, "categories": ["Mobile", "AR"],
+            "tools": ["Swift", "Xcode"]},
+
+
+        {"id": "softproj4","title": "Build Your Own World", "org":"UC Berkeley | CS 61B: Data Structures", "photo": "byowthumbnail.png", 
+            "link":"https://drive.google.com/file/d/1bn2ytyhVF_46TVP-_mFIKQIgCPUSo8wM/view?usp=sharing", "linkType":"n/a",
+            "desc":"Developed assets and final iteration of algorithm for random world generation and light rendering for Data Structures partner project", "isDesign": false, "isDev": true, "categories": ["Game Design"],
+            "tools": ["Java"]}
+    ],
+
+    [
+        {"id": "graphicproj0","title": "Project Lore", "org":"hello:world Hackathon 2021", "photo": "ProjectLoreThumbnail.png", 
+            "link":"https://devpost.com/software/research-health", "linkType":"devpost",
+            "desc":"Evidence-based healthcare web app that provides accurate medical advice via research articles annotated by verified users.", 
+            "isDesign": true, "isDev": true, "categories": ["UI/UX", "Front End"],"tools": ["Figma, React, CSS"]}
+    ],
+
+    [
+        {"id": "hardproj0","title": "Wind Turbine", "org":"UC Berkeley | ENGIN 26: 3D Modeling", "photo": "AKADMYthumbnail.png", 
+            "link":"", "linkType":"",
+            "desc":"Created 2D drawings + 3D CAD models for prototype wind turbine and graphic design for the report cover.", 
+            "isDesign": false, "isDev": true, "categories": ["CAD"],"tools": ["SolidWorks"]}
+    ],
+
+    [
+        {"id": "drawproj0","title": "17th Season", "org":"The Carillon Yearbook", "photo": "17thSeason.png", 
+            "link":"", "linkType":"",
+            "desc":"Digital illustration done for poem of the same name written by another editor", 
+            "isDesign": true, "isDev": false, "categories": ["Publications"],"tools": ["ibisPaintX"]},
+    
+        {"id": "drawproj1","title": "Tied Within", "org":"JEA", "photo": "Tied_Within.JPG", 
+            "link":"", "linkType":"n/a",
+            "desc":"", 
+            "isDesign": true, "isDev": false, "categories": ["Publications"],
+            "tools": ["Figma"]},
+
+        {"id": "drawproj2","title": "Coast of Cannery Row", "org":"Celebrating Art", "photo": "CoastofCanneryRow.PNG", 
+            "link":"", "linkType":"n/a",
+            "desc":"Revamped UI and UX for website of Barracuda Technologies, a startup that converts agri-waste into usable, natural fibers.", 
+            "isDesign": true, "isDev": false, "categories": ["Publications"],
+            "tools": ["Figma"]}
+    ]
+]
