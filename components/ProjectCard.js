@@ -11,10 +11,10 @@ import { AiOutlineLink } from 'react-icons/ai'
 
 function ProjectCard({data, title, photo, category, link, linkType}) {
 
-    console.log("This is the data again:");
-    console.log(data);
+    // console.log("This is the data again:");
+    // console.log(data);
 
-    const ref = createRef();
+    // const ref = createRef();
 
     let url = "url("+data.photo+")";
 

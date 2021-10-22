@@ -110,7 +110,7 @@ export default function Home() {
               <div id={styles.landingDevIcon}></div>
             </div> */}
             <div id={styles.textFirstLine}>Hey there! I'm</div>
-            <div id={styles.textSecondLine}>DANIEL,</div>
+            <div id={styles.textSecondLine}>DANIEL</div>
             <div id={styles.textThirdLine}>DESIGNER + DEVELOPER</div>
           </div>
           <div id={styles.downArrow} onClick={()=>goTo("#projects")}/>  
@@ -124,7 +124,7 @@ export default function Home() {
         <div id={styles.tabContainer}>
           <ProjectTab type="0"/>
           <ProjectTab type="1"/>
-          <ProjectTab type="2"/>
+          {/* <ProjectTab type="2"/> */}
           <ProjectTab type="3"/>
         </div>
 
@@ -133,9 +133,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="about" className={styles.aboutSection}>
+      {/* <div id="about" className={styles.aboutSection}>
         <p className={styles.sectionHeading}>ABOUT ME</p>
-      </div>
+      </div> */}
     </div>
   )
 }

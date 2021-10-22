@@ -30,7 +30,8 @@ export default function NavBar() {
             </a>
             <div className={styles.logo} onClick={()=>router.push("/")}/>
 
-            <div className={styles.menuitem} onClick={()=>goTo('#about')}>
+            {/* <div className={styles.menuitem} onClick={()=>goTo('#about')}> */}
+            <div className={styles.menuitem}>
                 ABOUT
             </div>
             <div className={styles.menuitem}>
