@@ -26,8 +26,8 @@ export default function Home() {
 
   function tabClick(type) {
     setProjectTab(type);
-    setProjectVisibility(false);
-    setProjectVisibility(true);
+    // setProjectVisibility(false);
+    // setProjectVisibility(true);
   }
 
   function Projects() {
@@ -106,16 +106,14 @@ export default function Home() {
         <div id={styles.landingContent}>
           <div className={styles.textContainer}>
             {/* <div id={styles.landingIcons}>
-              <div id={styles.landingDesignIcon}></div>
-              <div id={styles.landingDevIcon}></div>
+              <div id={styles.landingDesignIcon}></div> <div id={styles.landingDevIcon}></div>
             </div> */}
-            <div id={styles.textFirstLine}>Hey there! I'm</div>
-            <div id={styles.textSecondLine}>DANIEL</div>
-            <div id={styles.textThirdLine}>DESIGNER + DEVELOPER</div>
+            <div id={styles.textFirstLine}>Hi there! I'm</div>
+            <div id={styles.textSecondLine}>DANIEL!</div>
+            <div id={styles.textThirdLine}>DESIGNER \ DEVELOPER</div>
           </div>
           <div id={styles.downArrow} onClick={()=>goTo("#projects")}/>  
         </div>   
-
       </div>
 
       <div id="projects" className={styles.projectSection}>
@@ -135,6 +133,7 @@ export default function Home() {
 
       {/* <div id="about" className={styles.aboutSection}>
         <p className={styles.sectionHeading}>ABOUT ME</p>
+        Hello
       </div> */}
     </div>
   )

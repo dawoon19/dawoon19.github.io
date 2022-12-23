@@ -3,6 +3,7 @@ import { useEffect, useRef, createRef} from 'react'
 import styles from '../styles/projectcard.module.css';
 
 import { useInViewport } from 'react-in-viewport';
+import { useRouter } from "next/router"
 
 // import { Icon } from '@iconify/react';
 // import devpostIcon from '@iconify-icons/simple-icons/devpost';
@@ -17,6 +18,7 @@ function ProjectCard({data, title, photo, category, link, linkType}) {
     // const ref = createRef();
 
     let url = "url("+data.photo+")";
+    const router = useRouter();
 
     useEffect(()=>{
 
@@ -45,6 +47,10 @@ function ProjectCard({data, title, photo, category, link, linkType}) {
             default:
                 return <AiOutlineLink color="white" size="50px"/>
         }
+    }
+
+    function GoToProjectPage(projectname) {
+        router.push(`/projects/${projectname}`)
     }
 
     return (

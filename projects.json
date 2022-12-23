@@ -17,12 +17,6 @@
             "isDesign": true, "isDev": true, "categories": ["UI/UX", "Front End"],
             "tools": ["Figma"]},
 
-        {"id": "softproj3","title": "AR for Healthcare", "org":"FHL Vive Center", "photo": "ARHealthThumbnail.png", 
-            "link":"", "linkType":"n/a",
-            "desc":"Currently developing MVP for AR iOS research project promoting exercise for children in the UCSF hospital",
-            "isDesign": false, "isDev": true, "categories": ["Mobile", "AR"],
-            "tools": ["Swift", "Xcode"]},
-
 
         {"id": "softproj4","title": "Build Your Own World", "org":"UC Berkeley | CS 61B: Data Structures", "photo": "byowthumbnail.png", 
             "link":"https://drive.google.com/file/d/18CquKnYTl8quiQoSFSVZe6JCazj5Hwb5/view?usp=sharing", "linkType":"n/a",

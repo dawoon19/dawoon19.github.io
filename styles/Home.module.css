@@ -38,8 +38,10 @@
     display:flex;
     justify-content: center;
     align-items: center;
+    justify-content:space-evenly;
     width:100vw;
     z-index: -1;
+    /* background-color: #0C2848; */
 }
 
 #landingDesignIcon {
@@ -47,9 +49,9 @@
     background-size:contain;
     background-repeat: no-repeat;
     background-position: center;
-    width:168px;
-    height:212px;
-    margin:75px;
+    width:500px;
+    height:300px;
+    /* margin:75px; */
 }
 
 #landingDevIcon {
@@ -83,18 +85,20 @@
 
 #textFirstLine {
     font-weight: 200;
-    font-size:1.5em;
+    font-size:2em;
+    letter-spacing: .1em;
 }
 
 #textSecondLine {
     font-weight: 700;
     font-size: 95px;
+    letter-spacing: .2em;
 }
 
 #textThirdLine {
-    font-weight: 700;
+    font-weight: 300;
     font-size:1.5em;
-
+    letter-spacing: .3em;
 }
 
 .sectionHeading {
@@ -289,7 +293,7 @@
 /**
     Appendix I. Responsive Styling
 */
-@media screen and (max-width:600px) {
+@media screen and (max-width:650px) {
     .landing {
         background-image: url('../public/WebsiteLandingBGMobile.svg');
         background-size:cover;
@@ -298,18 +302,16 @@
         background-position-y: bottom;
     }
     
-
-    #textFirstLine {
-        font-size: 1.25em;
-    }
-
-    #textSecondLine {
-        font-size: 4em;
-    }
-
-    #textThirdLine {
-        font-size:1.25em;
-    }
+    #textFirstLine { font-size: 1.25em; }
+    #textSecondLine { font-size: 4em; }
+    #textThirdLine { font-size:1.25em; }
+    #tabContainer { flex-direction: column;}
+    
+    .projectTabGraphic { font-size: 1em; padding-right:17px; }
+    .projectTabDraw { font-size: 1em; padding-right:17px; }
+    .projectTabSoftware { font-size: 1em; padding-right:17px; }
+    .projectTabEngine { font-size: 1em; padding-right:17px; }
+    .projectTabInactive { font-size: 1em; padding-right:17px; }
 }
 
 /**
