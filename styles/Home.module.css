@@ -1,329 +1,172 @@
 .body {
     position:absolute;
     background-color: #0C2848;
-    width:100vw;
-    height:100vh;
+    /* color: #52667C; */
+    /* background-color: #EBF0F6; */
+    color:white;
+    width:100%;
+    height:100%;
     z-index:0;
-    overflow-y:scroll;
-    overflow-x:hidden;
-    scroll-behavior: smooth;
+    /* overflow-x:hidden; */
 }
 
-/**
-    I. Landing Section Styling
-*/
-.landing {
-    position:relative;
-    background-image: url('../public/WebsiteLandingBG.svg');
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-position-x:center;
-    background-position-y: bottom;
-    width:100vw;
-    height:max(100vh,700px);
-    justify-content: center;
-    align-items: center;
-    z-index:-2;
-
-    animation-name: landStart;
-    animation-duration: 2s;
-    animation-timing-function: ease-in-out;
-
-    /* clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%); */
-}
-
-#landingIcons {
+/** I. Landing Section Styling */
+#landing {
     position:absolute;
-    margin-top:150px;
+    top:0;
+    width:100%;
+    height:max(100%, 600px);
     display:flex;
     justify-content: center;
     align-items: center;
-    justify-content:space-evenly;
-    width:100vw;
-    z-index: -1;
-    /* background-color: #0C2848; */
-}
-
-#landingDesignIcon {
-    background-image: url('../public/DesignIcon.svg');
-    background-size:contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width:500px;
-    height:300px;
-    /* margin:75px; */
-}
-
-#landingDevIcon {
-    background-image: url('../public/DevelopIcon.svg');
-    background-size:contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width:264px;
-    height:128px;
-    margin-left:75px;
-}
-
-#landingContent {
-    height:inherit;
-    display:flex;
-    flex-direction: column;
-    justify-content:space-evenly;
-    align-items:center;
 }
 
 .textContainer {
-    margin-top:200px;
-    position:relative;
+    transform:translateY(25px);
+    position:absolute;
     display:flex;
     flex-direction: column;
     justify-content:center;
     align-items: center;
-    color:white;
     line-height: 1.5;
+    animation-name: landingTextEnter;
+    animation-duration: 0.8s;
 }
 
-#textFirstLine {
-    font-weight: 200;
-    font-size:2em;
-    letter-spacing: .1em;
+@keyframes landingTextEnter {
+    0% {transform:translateY(200px); opacity:0}
+    75% {transform:translateY(-50px);opacity:1}
+    100% {transform:translateY(25px);}
 }
 
-#textSecondLine {
-    font-weight: 700;
-    font-size: 95px;
-    letter-spacing: .2em;
-}
+#textFirstLine { font-weight:200;font-size:1.5em;letter-spacing: .1em;}
+#textSecondLine {font-weight: 700; font-size: 5em; letter-spacing: .3em;}
+#textThirdLine { font-weight: 300; font-size:1.25em; letter-spacing: .5em;}
+#textFourthLine { transform: translateY(50px); font-weight: 200; font-size:1em; letter-spacing: .1em;}
 
-#textThirdLine {
-    font-weight: 300;
-    font-size:1.5em;
-    letter-spacing: .3em;
-}
-
-.sectionHeading {
-    padding-top: 200px;
-    font-weight: 200;
-    font-size:1em;
-    color:white;
-}
-
-#downArrow {
-    background-image: url('../public/DownArrow.svg');
-    background-size:contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width:100vw;
-    height:20px;
+.landingLink {
     cursor:pointer;
+    padding-bottom:5px;
+    background-image: linear-gradient(white,white);
+    background-position: bottom left;
+    background-size: 0 3px;
+    background-repeat: no-repeat;
+    transition: 
+        font-weight 0.2s ease-in-out, 
+        background-size 0.2s ease-out,
+        background-position 0s 0.2s ease-out;
+    -moz-transition: 
+        font-weight 0.2s ease-in-out, 
+        background-size 0.2s ease-out,
+        background-position 0s 0.2s ease-out;
+    -ms-transition: 
+        font-weight 0.2s ease-in-out, 
+        background-size 0.2s ease-out,
+        background-position 0s 0.2s ease-out;
+    -o-transition: 
+        font-weight 0.2s ease-in-out, 
+        background-size 0.2s ease-out,
+        background-position 0s 0.2s ease-out;
+}
 
-    transition: height 0.25s ease-out;
+.landingLink:hover { 
+    font-weight:700; 
+    background-position: bottom right;
+    background-size: 100% 3px;
+}
 
-    animation-name: pulsate;
-    animation-duration: 2s;
-    animation-timing-function: ease-in-out;
+#landingBGContainer {
+    will-change: clip-path, opacity;
+
+    position:absolute;
+    background-color: #9F2950;
+    width:100%;
+    height:100%;
+
+    animation: landStart 1s ease-in-out;
+}
+
+#designBG {
+    will-change: clip-path;
+    position:relative;
+    background-image: radial-gradient(#D45168, #9F2950);
+    clip-path: polygon(0 0, 40% 0, 60% 100%, 0% 100%);
+    width:100%;
+    height:max(100vh, 600px);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    padding:0;
+    background-position:right;
+    transition:clip-path 0.3s ease-in-out;
+}
+
+#devBG {
+    position:absolute;
+    background-image: radial-gradient(#4374BE, #254F8C);
+    width:100%;
+    height:max(100vh, 600px);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#designBGoverlay {
+    position:absolute;
+    background-color: #D45168;
+    width:100%;
+    height:100%;
+    opacity:0.75;
+    mix-blend-mode:color;
+}
+
+@keyframes rotateanimation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.rotatingbg {
+    position:relative;
+    background-size:cover;
+    width:600px;
+    height:600px;
+    filter:blur(4px);
+    opacity:0.25;
+    transform-origin:center;
+    animation-name: rotateanimation;
+    animation-duration: 120s;
     animation-iteration-count: infinite;
 }
 
-/**
-    II. Project Section Styling
-*/
-.projectSection {
-    position:relative;
-    width:100vw;
-    height:auto;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-}
+#scrollingdesigns { background-image:url('../public/RotatingDesigns.png'); }
+#scrollingdev { background-image:url('../public/RotatingDev.png'); }
 
-.projectSection .textContainer {
-    padding-top: 200px;
-    justify-content: flex-start;
-}
-
-#tabContainer {
-    margin:20px;
-    position:relative;
-    display:flex;
+#devBGoverlay {
+    position:absolute;
+    background-image: radial-gradient(#4374BE, #254F8C);
     width:100%;
-    height:15px;
-
-    justify-content: center;
-    align-items: center;
-
-    color:white;
+    height:100%;
+    opacity:0.5;
+    mix-blend-mode:color;
 }
-
-.projectTabSoftware {
-    background-color: #3B6AB0;
-    margin:15px;
-    padding:25px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    width:auto;
-    height:25px;
-    border-radius: 50px;
-    border: 1px solid transparent;
-    cursor:pointer;
-    font-size:18px;
-    font-weight:700;
-    transition: border 0.25s ease-out, background-color 0.25s ease-out;
-}
-
-.projectTabSoftware:hover {
-    border:5px solid white;
-}
-
-.projectTabGraphic {
-    background-color: #9F2950;
-    margin:15px;
-    padding:25px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    width:auto;
-    height:25px;
-    border-radius: 50px;
-    border: 1px solid transparent;
-    cursor:pointer;
-    font-size:18px;
-    font-weight:700;
-    transition: border 0.25s ease-out, background-color 0.25s ease-out;
-}
-
-.projectTabGraphic:hover {
-    border:5px solid white;
-}
-
-.projectTabEngine {
-    background-color: rgb(230,150,70);
-    margin:15px;
-    padding:25px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    width:auto;
-    height:25px;
-    border-radius: 50px;
-    border: 1px solid transparent;
-    cursor:pointer;
-    font-size:18px;
-    font-weight:700;
-    transition: border 0.25s ease-out, background-color 0.25s ease-out;
-}
-
-.projectTabEngine:hover {
-    border:5px solid white;
-}
-
-.projectTabDraw {
-    background-color: rgb(100,60,100);
-    margin:15px;
-    padding:25px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    width:auto;
-    height:25px;
-    border-radius: 50px;
-    border: 1px solid transparent;
-    cursor:pointer;
-    font-size:18px;
-    font-weight:700;
-    transition: border 0.25s ease-out, background-color 0.25s ease-out;
-}
-
-.projectTabDraw:hover {
-    border:5px solid white;
-}
-
-.projectTabInactive {
-    color:white;
-    margin:15px;
-    padding:25px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    width:auto;
-    height:25px;
-    border-radius: 50px;
-    border: 1px solid white;
-    cursor:pointer;
-    font-size:18px;
-    font-weight:300;
-    transition: border 0.25s ease-out, background-color 0.25s ease-out, font-weight 0.25s ease-out;
-}
-
-.projectTabInactive:hover {
-    font-weight:700;
-    border:3px solid white;
-}
-
-.tabLabel {
-    margin-left:10px;
-}
-
-.cardContainer {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-/**
-    III. About Section Styling
-*/
-.aboutSection {
-    position:relative;
-    width:100vw;
-    height:100vh;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.aboutSection .textContainer {
-    padding-top: 200px;
-    justify-content: flex-start;
-}
-
 
 /**
     Appendix I. Responsive Styling
 */
 @media screen and (max-width:650px) {
-    .landing {
-        background-image: url('../public/WebsiteLandingBGMobile.svg');
-        background-size:cover;
-        background-repeat: no-repeat;
-        background-position-x:center;
-        background-position-y: bottom;
-    }
-    
     #textFirstLine { font-size: 1.25em; }
-    #textSecondLine { font-size: 4em; }
-    #textThirdLine { font-size:1.25em; }
+    #textSecondLine { font-size: 3em; }
+    #textThirdLine { font-size:0.9em; }
+    #textFourthLine { font-size: 0.75em; }
     #tabContainer { flex-direction: column;}
-    
-    .projectTabGraphic { font-size: 1em; padding-right:17px; }
-    .projectTabDraw { font-size: 1em; padding-right:17px; }
-    .projectTabSoftware { font-size: 1em; padding-right:17px; }
-    .projectTabEngine { font-size: 1em; padding-right:17px; }
-    .projectTabInactive { font-size: 1em; padding-right:17px; }
+    .rotatingbg { width:400px; height:400px;}
 }
 
 /**
     Appendix II. Animations
 */
 @keyframes landStart {
-    from { clip-path: circle(0% at 50% 100%); opacity:0; }
-    to { clip-path: circle(120% at 50% 100%); opacity:1; }
-}
-
-@keyframes pulsate {
-    0% { opacity:0.5;}
-    50% { opacity: 1; }
-    100% {opacity: 0.5;}
+    0% { opacity:0;}
+    50% { opacity:0; clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 0%);}
+    100% { opacity:1; clip-path: polygon(0% 0%, 0% 100%, 60% 100%, 40% 0, 100% 0, 100% 100%, 60% 100%, 40% 0);}
 }

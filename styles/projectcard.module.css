@@ -1,21 +1,24 @@
 .card {
     width:350px;
-    /* height:400px; */
+    height:450px;
     border-radius: 15px;
-    margin:50px;
+    margin:50px 50px 0px 50px;
     color:white;
+    /* color: #52667C; */
     display:flex;
     flex-direction: column;
     align-items: center;
 
     /* background-color:khaki; */
     animation-name: cardShows;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-timing-function: ease-in-out;
 }
 
 .thumbnail {
     display:flex;
+    color:white;
+    font-weight: 200;
     justify-content: center;
 }
 
@@ -28,7 +31,7 @@
     background-size:cover;
     background-position:center;
     border-radius: 15px;
-    box-shadow: 0px 0px 50px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 50px rgba(0,0,0,0.15);
     transition: opacity 0.25s ease-out, width 0.25s ease-out, height 0.25s ease-out, margin-bottom 0.25s ease-out;
 }
 
@@ -45,23 +48,21 @@
     justify-content: center;
     align-items: center;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .designBG {
     position:relative;
-    left:-15px;
-    top:15px;
+    transform: translate3d(-15px,15px,0px);
     width:250px;
     height:200px;
     background-repeat: no-repeat;
     background-size:cover;
     background-position:center;
     border-radius: 15px;
-    box-shadow: 0px 0px 50px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 50px rgba(0,0,0,0.15);
     transition: opacity 0.25s ease-out, width 0.25s ease-out, height 0.25s ease-out, margin-bottom 0.25s ease-out;
 }
-
-
 
 .thumbnail:hover .overlayBG{
     width:300px;
@@ -86,6 +87,7 @@
     text-align: center;
     transition: top 0.25s ease-out;
     margin:5px;
+    letter-spacing:0.05em;
 
     /* box-shadow: 0px 0px 50px rgba(0,0,0,0.25); */
 }
@@ -95,12 +97,13 @@
     font-size:15px;
     text-align: center;
     color:rgba(255,255,255,0.5);
+    /* color: #52667C; */
 }
 
 .projectLink {
 
     margin-top: 15px;
-    padding-bottom:2px;
+    padding-bottom:5px;
     background-image: linear-gradient(white,white);
     background-position: bottom left;
     background-size: 0 3px;
@@ -119,6 +122,7 @@
 }
 
 .categories {
+    color:white;
     margin-top:30px;
     display: flex;
     justify-content: center;
@@ -148,10 +152,12 @@
 
 .description {
     width:250px;
-    font-weight:300;
+    font-weight:200;
     line-height: 16px;
     font-size:12px;
     text-align: center;
+    letter-spacing: 1px;
+    line-height: 1.25em;
 }
 
 @keyframes cardShows {

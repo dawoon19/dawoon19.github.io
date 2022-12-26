@@ -1,64 +1,123 @@
 [
     [
-        {"id": "softproj0","title": "Project Lore", "org":"hello:world Hackathon 2021", "photo": "ProjectLoreThumbnail.png", 
-        "link":"https://devpost.com/software/research-health", "linkType":"devpost",
-        "desc":"Evidence-based healthcare web app that provides accurate medical advice via research articles annotated by verified users", 
-        "isDesign": true, "isDev": true, "categories": ["UI/UX", "Front End"],"tools": ["Figma, React, CSS"]},
+        {"id": "desproj0","title": "Project Lore", "org":"Cal Hacks Hackathon", "photo": "ProjectLoreThumbnail.png", 
+        "link":"https://drive.google.com/file/d/1h5naTLtWvAFsSOxXwRPCncVtNi6rM5LK/view?usp=sharing", "linkType":"n/a",
+        "desc":"Created user interface and frontend for healthcare web app providing accurate medical advice via research articles annotated by verified users", 
+        "isDesign": true, "isDev": true, "categories": ["UI/UX", "Web Design","Front End"],"tools": ["Figma", "ReactJS"]},
 
-        {"id": "softproj1","title": "Barracuda Technologies", "org":"Web Development at Berkeley", "photo": "BarraThumbnail.png", 
+        {"id": "desproj1","title": "Barracuda Technologies", "org":"Web Development at Berkeley", "photo": "BarraThumbnail.png", 
             "link":"https://drive.google.com/file/d/1bn2ytyhVF_46TVP-_mFIKQIgCPUSo8wM/view?usp=sharing", "linkType":"n/a",
             "desc":"Revamped UI and UX design for website of Barracuda Technologies, a startup that converts agri-waste into usable, natural fibers", 
-            "isDesign": true, "isDev": false, "categories": ["UI/UX"],
+            "isDesign": true, "isDev": false, "categories": ["UI/UX", "Web Design"],
             "tools": ["Figma"]},
 
-        {"id": "softproj2","title": "Launchparty", "org":"Web Development at Berkeley", "photo": "LaunchpartyThumbnail.png", 
-            "link":"", "linkType":"n/a",
-            "desc":"Worked on design and responsive front-end for various pages for crowdfunding startup Launchparty", 
-            "isDesign": true, "isDev": true, "categories": ["UI/UX", "Front End"],
-            "tools": ["Figma"]},
+        {"id": "desproj2","title": "Personal Website", "org":"Portfolio", "photo": "portfoliothumbnail.png", 
+        "link":"/", "linkType":"n/a",
+        "desc":"Designed and developed entire personal website from scratch using Figma and ReactJS with dynamically generated project cards from JSON file", "isDesign": true, "isDev": true, "categories": ["UI/UX","Web Design","Front End"],
+        "tools": ["Figma", "ReactJS","NextJS"]}, 
 
+        {"id": "desproj3","title": "GoAhead VC", "org":"Web Development at Berkeley", "photo": "goaheadredthumbnail.png", 
+        "link":"https://www.figma.com/file/eoIgvW2KJbUphfLAeeeLny/GoAhead-Final-Design-Writeup?node-id=0%3A1", "linkType":"n/a",
+        "desc":"Produced new logo and final high-fidelity designs for venture capital startup company", 
+        "isDesign": true, "isDev": false, "categories": ["UI/UX", "Web Design"],"tools": ["Figma"]},
 
-        {"id": "softproj4","title": "Build Your Own World", "org":"UC Berkeley | CS 61B: Data Structures", "photo": "byowthumbnail.png", 
+        {"id": "desproj4","title": "OpenDoAR", "org":"Cal Hacks Hackathon", "photo": "opendoarthumbnail.png", 
+        "link":"https://devpost.com/software/opendoar", "linkType":"n/a",
+        "desc":"Designed Figma prototypes and debugged AR interaction errors in AR iOS app for instructors and event organizers to maintain a COVID-safe environment", 
+        "isDesign": true, "isDev": true, "categories": ["UI/UX","AR/VR","Mobile"],"tools": ["Figma", "Flutter"]},
+
+        {"id": "desproj5","title": "Amity", "org":"Amity", "photo": "amitythumbnail.png", 
+        "link":"https://xd.adobe.com/view/528a9dcc-08a7-4236-87eb-054dd253deb3-07d9/?fullscreen", "linkType":"n/a",
+        "desc":"Devised branding & visual style, marketing material, and user interface for online friend-making website", 
+        "isDesign": true, "isDev": false, "categories": ["UI/UX", "Web Design"],"tools": ["Adobe XD"]},
+
+        {"id": "desproj6","title": "Full Stack DeCal Website", "org":"Web Development at Berkeley", "photo": "fullstackthumbnail.png", 
+        "link":"https://fullstackdecal.com/", "linkType":"n/a",
+        "desc":"Designed user interface for the Full Stack Development course website based on the organization's branding style", 
+        "isDesign": true, "isDev": false, "categories": ["UI/UX", "Web Design"],"tools": ["Figma"]},
+
+        {"id": "desproj7","title": "Budget Buddy", "org":"Intersect Designathon", "photo": "budgetbuddythumbnail.png", 
+        "link":"https://drive.google.com/file/d/1C3quGZXyyNdqVmo8944b9nLIQ72uL2RR/view?usp=sharing", "linkType":"n/a",
+        "desc":"Constructed the information architecture, wireframes, and interactions for mobile app helping college students manage budget", 
+        "isDesign": true, "isDev": false, "categories": ["UI/UX"],"tools": ["Figma"]}
+    ],
+    [
+        {"id": "softproj0","title": "Build Your Own World", "org":"UC Berkeley | CS 61B: Data Structures", "photo": "byowthumbnail.png", 
             "link":"https://drive.google.com/file/d/18CquKnYTl8quiQoSFSVZe6JCazj5Hwb5/view?usp=sharing", "linkType":"n/a",
             "desc":"Developed assets and final iteration of algorithm for random world generation and light rendering for Data Structures partner project", "isDesign": false, "isDev": true, "categories": ["Game Design"],
-            "tools": ["Java"]}
+            "tools": ["Java"]},
+
+        {"id": "softproj1","title": "Rendering Soap Bubbles", "org":"UC Berkeley | CS 184: Computer Graphics", "photo": "bubblethumbnail.png", 
+        "link":"https://cal-cs184-student.github.io/sp22-project-webpages-sravyab36/finalprojwriteup/index.html", "linkType":"n/a",
+        "desc":"Conducted research, debugged, and implemented rendering of thin-film interference on soap bubble surfaces", "isDesign": false, "isDev": true, "categories": ["Graphics", "Research"],
+        "tools": ["C++"]}, 
+
+        {"id": "softproj2","title": "AR for Healthcare", "org":"FHL Vive Center for Enhanced Reality", "photo": "ARHealthcareThumbnail.png", 
+        "link":"https://github.com/dawoon19/ARrehab", "linkType":"n/a",
+        "desc":"Tested and implemented interactive functionalities for garden decoration, pet dragon, and minigames for AR healthcare app promoting exercise for hospitalized children", "isDesign": false, "isDev": true, "categories": ["AR/VR", "Mobile"],
+        "tools": ["Swift", "ARKit"]}, 
+
+        {"id": "softproj3","title": "Personal Website", "org":"Portfolio", "photo": "portfoliothumbnail.png", 
+        "link":"/", "linkType":"n/a",
+        "desc":"Designed and developed entire personal website from scratch using Figma and ReactJS with dynamically generated project cards from JSON file", "isDesign": true, "isDev": true, "categories": ["UI/UX","Web Design","Front End"],
+        "tools": ["Figma", "ReactJS","NextJS"]}, 
+
+        {"id": "softproj4","title": "Project Lore", "org":"Cal Hacks Hackathon", "photo": "ProjectLoreThumbnail.png", 
+        "link":"https://drive.google.com/file/d/1h5naTLtWvAFsSOxXwRPCncVtNi6rM5LK/view?usp=sharing", "linkType":"n/a",
+        "desc":"Created user interface and frontend for healthcare web app providing accurate medical advice via research articles annotated by verified users", 
+        "isDesign": true, "isDev": true, "categories": ["UI/UX", "Front End"],"tools": ["Figma", "ReactJS"]},    
+        
+        {"id": "softproj5","title": "OpenDoAR", "org":"Cal Hacks Hackathon", "photo": "opendoarthumbnail.png", 
+        "link":"https://devpost.com/software/opendoar", "linkType":"n/a",
+        "desc":"Designed Figma prototypes and debugged AR interaction errors in AR iOS app for instructors and event organizers to maintain a COVID-safe environment", 
+        "isDesign": true, "isDev": true, "categories": ["UI/UX","AR/VR","Mobile"],"tools": ["Figma", "Flutter"]}
     ],
 
     [
+        {"id": "graphicproj2","title": "#Berkelium 5K Run", "org":"Blue & Gold Yearbook", "photo": "bklthumbnail.png", 
+        "link":"", "linkType":"drive",
+        "desc":"2020-2021 yearbook spread on virtual marathon during the quarantine setting of the pandemic designed", 
+        "isDesign": true, "isDev": false, "categories": ["Publications"],"tools": ["Adobe InDesign"]},
+
         {"id": "graphicproj0","title": "Night Under the Stars", "org":"Blue & Gold Yearbook", "photo": "nightunderstarsspread.png", 
-            "link":"https://drive.google.com/file/d/1xlpsvLXkYJYLbnsQ2k81UmmofRE0qFXh/view?usp=sharing", "linkType":"drive",
-            "desc":"2019-2020 yearbook spread for anti-human-trafficking event featuring multi-cultural dances designed via Photoshop & InDesign.", 
-            "isDesign": true, "isDev": false, "categories": ["Publications"],"tools": ["Photoshop, InDesign"]},
+            "link":"", "linkType":"drive",
+            "desc":"2019-2020 yearbook spread for anti-human-trafficking event featuring multi-cultural dances", 
+            "isDesign": true, "isDev": false, "categories": ["Publications"],"tools": ["Adobe Photoshop", "Adobe InDesign"]},
 
-        {"id": "graphicproj0","title": "Dethroning the Dancing King", "org":"Blue & Gold Yearbook", "photo": "ddrspread.png", 
-            "link":"https://drive.google.com/file/d/1R2GwhT4LuemaTk5vBgSRqhq60nKLEhuX/view?usp=sharing", "linkType":"drive",
-            "desc":"2019-2020 yearbook spread for Dance Dance Revolution community event with Berkeley professor designed via Photoshop & InDesign.", 
-            "isDesign": true, "isDev": false, "categories": ["Publications"],"tools": ["Photoshop, InDesign"]}
-    ],
+        {"id": "graphicproj1","title": "Dance Dance Revolution", "org":"Blue & Gold Yearbook", "photo": "ddrspread.png", 
+            "link":"", "linkType":"drive",
+            "desc":"2019-2020 yearbook spread for Dance Dance Revolution community event with Berkeley professor", 
+            "isDesign": true, "isDev": false, "categories": ["Publications"],"tools": ["Adobe Photoshop", "Adobe InDesign"]},
 
-    [
-        {"id": "hardproj0","title": "Wind Turbine", "org":"UC Berkeley | ENGIN 26: 3D Modeling", "photo": "AKADMYthumbnail.png", 
-            "link":"", "linkType":"",
-            "desc":"Created 2D drawings + 3D CAD models for prototype wind turbine and graphic design for the report cover.", 
-            "isDesign": false, "isDev": true, "categories": ["CAD"],"tools": ["SolidWorks"]}
-    ],
-
-    [
         {"id": "drawproj0","title": "17th Season", "org":"The Carillon Yearbook", "photo": "17thSeason.png", 
-            "link":"https://drive.google.com/file/d/13Ue6s72sfezz4_H4yM5YvCiJcJN3qUdk/view?usp=sharing", "linkType":"",
+            "link":"", "linkType":"",
             "desc":"Digital illustration done for poem of the same name written by another editor", 
             "isDesign": true, "isDev": false, "categories": ["Publications"],"tools": ["ibisPaintX"]},
     
         {"id": "drawproj1","title": "Tied Within", "org":"JEA", "photo": "Tied_Within.JPG", 
-            "link":"https://drive.google.com/file/d/19L2W9vQxoxRa6plXKPL2adjzgxZWlvWX/view?usp=sharing", "linkType":"n/a",
-            "desc":"2-hour literary illustration contest hosted by the Journalism Education Association visually interpreting a given poem", 
+            "link":"", "linkType":"n/a",
+            "desc":"2-hour literary illustration contest on visually interpreting a poem", 
             "isDesign": true, "isDev": false, "categories": ["Publications"],
-            "tools": ["Figma"]},
+            "tools": ["Illustration"]},
 
         {"id": "drawproj2","title": "Coast of Cannery Row", "org":"Celebrating Art", "photo": "CoastofCanneryRow.PNG", 
-            "link":"https://drive.google.com/file/d/1On0SI_4655zeZEIXHC9KTD-E2SUc4vVZ/view?usp=sharing", "linkType":"n/a",
-            "desc":"Revamped UI and UX for website of Barracuda Technologies, a startup that converts agri-waste into usable, natural fibers.", 
+            "link":"", "linkType":"n/a",
+            "desc":"Sketched scenery of Cannery Row in California", 
             "isDesign": true, "isDev": false, "categories": ["Publications"],
-            "tools": ["Figma"]}
+            "tools": ["Illustration"]}
+    ],
+
+    [
+        {"id": "hardproj2","title": "Voice Controlled Car", "org":"UC Berkeley | EECS 16B: Information Devices", "photo": "voicectrlcarthumbnail.png", 
+        "link":"", "linkType":"",
+        "desc":"Designed circuit board and assembly for voice controlled car and trained car on audio recording data to follow verbal command", 
+        "isDesign": false, "isDev": true, "categories": ["Circuits","Machine Learning"],"tools": ["Python","TI Launchpad"]},
+
+        {"id": "hardproj0","title": "Wind Turbine", "org":"UC Berkeley | ENGIN 26: 3D Modeling", "photo": "AKADMYthumbnail.png", 
+            "link":"", "linkType":"",
+            "desc":"Researched aerodynamic theories and created 2D drawings + 3D CAD models of prototype wind turbine", 
+            "isDesign": false, "isDev": true, "categories": ["Research","CAD"],"tools": ["SolidWorks"]}
+
+
     ]
 ]

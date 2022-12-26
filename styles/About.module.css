@@ -1,0 +1,292 @@
+#aboutpage {
+    width:100vw;
+    height:100vh;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    /* color: #52667C;
+    background-color: #EBF0F6; */
+    background-color: #0C2848;
+    color:white;
+
+    overflow-y:scroll;
+}
+
+#aboutContainer {
+    margin-top:200px;
+    animation: profilePicStart 1s ease-in-out;
+}
+
+.headline {
+    font-weight:700;
+    text-align:center;
+    font-size:1.25em;
+    letter-spacing: 0.125em;
+}
+
+#profileContainer {
+    display: flex;
+    align-items: center;
+    margin:50px;
+    justify-content: space-between;
+    /* animation: profilePicStart 1s ease-in-out; */
+}
+
+#profilepicContainer {
+    position:relative;
+    width:220px;
+    height:220px;
+    transition: transform 0.2s ease-in-out;
+}
+
+#profilepicContainer:hover {
+    transform: translateY(-10px);
+}
+
+#profilepicContainer:hover .redprofilebg {
+    background-color: #D45168;
+}
+
+#profilepicContainer:hover .blueprofilebg {
+    background-color: #629bf0;
+}
+
+#profilepic {
+    position:absolute;
+    background-image: url('../public/profilepic.png');
+    background-size: 340px auto;
+    background-position: -80px -50px;
+    background-repeat: no-repeat;
+
+    border-radius:40px;
+    width:220px;
+    height:220px;
+}
+
+#profilepicoverlay {
+    position:absolute;
+    border-radius:40px;
+    width:220px;
+    height:220px;
+    opacity:1;
+    transition:opacity 0.2s linear;
+    /* background-image: linear-gradient(45deg, #D45168, #629bf0); */
+    background-image:url("../public/profilepicfiltered.png");
+    background-size: 340px auto;
+    background-position: -80px -50px;
+    background-repeat: no-repeat;
+    /* transform: translate3d(0,0,0); */
+}
+
+#profilepicContainer:hover #profilepicoverlay {
+    opacity: 0;
+}
+
+.redprofilebg {
+    position:absolute;
+    z-index: 0;
+    border: 4px solid #D45168;
+    border-radius: 40px;
+    width:220px;
+    height:220px;
+    transform: translate3d(-15px, -15px, 0);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.blueprofilebg {
+    position:absolute;
+    z-index: 0;
+    border: 4px solid #629bf0;
+    border-radius: 40px;
+    width:220px;
+    height:220px;
+    transform: translate3d(15px, 15px, 0);
+    transition: background-color 0.2s ease-in-out;
+}
+#profilesummary {
+    font-weight: 200;
+    font-size:1em;
+    letter-spacing: 0.05em;
+    width:320px;
+    line-height: 1.4em;
+    margin-left:60px;
+    text-align: justify;
+}
+.desTxt {
+    color: #ff859b;
+    font-weight:700;
+}
+
+.devTxt {
+    color: #629bf0;
+    font-weight:700;
+}
+
+.resume {
+    display:grid;
+    align-items: center;
+}
+
+.resumeentry {
+    display:flex;
+    flex-direction: column;
+    /* align-items: center; */
+    line-height: 1.5em;
+    margin-top: 2em;
+    letter-spacing: 0.05em;
+    width:100%;
+    height:auto;
+}
+
+.resumetimelabel {
+    grid-column-start: 1;
+    grid-column-end:2;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-weight:200;
+    letter-spacing: 0.1em;
+    width:100%;
+    height:auto;
+}
+
+.resumedivider {
+    grid-column-start: 2;
+    grid-column-end:3;
+    background-image: linear-gradient(white,white);
+    width:1px;
+    height:200px;
+    margin-left:50px;
+    margin-right:50px;
+}
+
+.resumejobgroup {
+    grid-column-start: 3;
+    grid-column-end:4;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+
+.resumepos {
+    font-weight:700;
+    font-size:1.2em;
+}
+
+.resumecompany {
+    font-weight:500;
+    font-size:0.9em;
+}
+
+.resumedata {
+    font-weight:200;
+    font-size:0.9em;
+}
+
+.toolList {
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.jobTool {
+    padding:2px 10px 2px 10px;
+    margin-bottom:10px;
+    margin-right:5px;
+    border-radius:20px;
+    border: 1.5px solid white;
+    color:white;
+    font-weight: 300;
+    font-size:0.7em;
+    transition:background-color 0.2s linear, color 0.2s linear;
+}
+
+.jobTool:hover {
+    color: #0C2848;
+    background-color: white;
+}
+
+.resumedesc {
+    font-weight:200;
+    font-size:0.9em;
+}
+
+@keyframes profilePicStart {
+    from {
+        /* filter:blur(10px);  */
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to {
+        /* filter:blur(0px);  */
+        opacity:1;
+        transform:translateY(0px);
+    }
+}
+
+@media screen and (max-width:800px) {
+    #profileContainer {
+        flex-direction: column;
+    }
+
+    #profilesummary {
+        margin-left:0px;
+        margin-top:40px;
+        font-size:0.9em;
+        width:300px;
+    }
+
+    .resume {
+        justify-items: center;
+        /* width:300px; */
+        padding:0 100px 0 100px;
+    }
+
+    .resumetimelabel {
+        margin-top:50px;
+    }
+
+    .resumedivider {
+        width:100px;
+        height:1px;
+        grid-column-start: 1;
+        grid-column-end:2;
+        margin-top:25px;
+        margin-bottom:25px;
+        margin-left:0;
+        margin-right:0;
+    }
+    .resumeentry {
+        margin-top: 0;
+        align-items: center;
+        justify-content: center;
+        text-align:center;
+    }
+
+    .resumejobgroup {
+        grid-column-start: 1;
+        grid-column-end:2;
+    }
+
+    .resumepos {
+        font-size:1em;
+    }
+    
+    .resumecompany {
+        font-weight:400;
+        font-size:0.8em;
+    }
+    
+    .resumedata {
+        font-weight:200;
+        font-size:0.8em;
+    }
+
+    .toolList {
+        justify-content: center;
+    }
+
+    .jobTool { font-size:0.7em;}
+}

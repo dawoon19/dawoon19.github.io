@@ -1,0 +1,141 @@
+/* I. MAIN PROJECT PORTAL */
+.projecthome {
+    background-color: #0C2848;
+    width:100vw;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    overflow-y:scroll;
+    color:white;
+}
+
+.projectportalcontainer {
+    transform:translateY(25px);
+    width:80%;
+    height:auto;
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    margin-left:50px;
+    margin-right: 50px;
+}
+
+.boxContainer {
+    display:flex;
+    flex-direction:column;
+    animation: boxShows 1s ease-in-out;
+    align-items: center;
+}
+
+.boxContainer p {
+    /* height:0; */
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 300;
+    width:250px;
+    opacity:0;
+    margin-bottom:25px;
+    transition: opacity 0.2s linear, height 0.2s linear;
+}
+
+.projecttypebox {
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    font-size:1.25rem;
+    padding:50px;
+    cursor: pointer;
+    color:white;
+    width:300px;
+    height:350px;
+    
+    border-radius:25px;
+    margin:25px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    transition: transform 0.2s linear;
+}
+
+.projecttypebox:hover {
+    transform: scale(1.1);
+}
+.projecttypebox:hover ~ p {
+    opacity:1;
+    height:auto;
+}
+
+.projecttypebox a {
+    transform: translateY(20px);
+}
+
+@keyframes boxShows {
+    from { opacity: 0; transform:translateY(50px); }
+    to { opacity: 1; transform:translateY(0px); }
+}
+
+/* II. PROJECT TYPE Page */
+.projectpage {
+    position:relative;
+    background-color: #0C2848;
+    color:white;
+    /* background-color: #EBF0F6;
+    color: #52667C; */
+    width:100vw;
+    height:100vh;
+
+    z-index:0;
+    overflow-x:hidden;
+    overflow-y:scroll;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    scroll-snap-type: inline mandatory;
+}
+
+.cardContainer {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom:50px;
+}
+
+.textContainer {
+    padding-top: 200px;
+    justify-content: flex-start;
+    font-size:1.25em;
+    font-weight: 300;
+    letter-spacing: 0.125em;
+    animation: boxShows 1s ease-in-out;
+}
+
+.textContainer a {
+    font-weight:700;
+}
+
+@media screen and (max-width:800px) {
+    .textContainer a {
+        font-size:1.5em;
+    }
+    .textContainer div {
+        font-size:0.75em;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 2em;
+    }
+    .projecttypebox {
+        width:250px;
+        height:250px;
+        font-size:1.1rem;
+    }
+}
+
+@keyframes showProjType {
+    from { opacity:0;width:0; clip-path: polygon(40% 0, 60% 0, 60% 100%, 40% 100%);}
+    to { opacity:1;width:auto;clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);}
+}
