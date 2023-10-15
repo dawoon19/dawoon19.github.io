@@ -21,7 +21,7 @@ export default function About(props) {
         var desc = props.desc;
 
         if (props.jobtype == 0) {
-            var color = "#D45168";
+            var color = "#ff859b";
         } else {
             var color = "#629bf0";
         }
@@ -54,33 +54,37 @@ export default function About(props) {
                             <div id={styles.profilepicoverlay}/>
                         </div>
                         <div id={styles.profilesummary}>
-                            Hello! My name is Daniel, and I'm a designer and software engineer studying <a className={styles.devTxt}>Electrical Engineering & Computer Science</a> and <a className={styles.desTxt}>Cognitive Science</a> at UC Berkeley! 
+                            Hello! My name is Daniel, and I'm a designer and software engineer with a BS in <a className={styles.devTxt}>Electrical Engineering & Computer Science</a> and BA in <a className={styles.desTxt}>Cognitive Science</a> at UC Berkeley! 
                             I enjoy building human-centered products that involve creating beautiful visuals and optimized user experiences. Nice to meet you!
                         </div>
                     </div>
 
                     {/* <div className={styles.headline}>RESUME</div> */}
                     <div className={styles.resume}>
-                        <div className={styles.resumetimelabel}>
-                            CURRENTLY
+                        {/* <div className={styles.resumetimelabel}>
+                            EDUCATION
                         </div>
                         <div className={styles.resumedivider}/>
                         <div className={styles.resumejobgroup}>
-                            <ResumeEntry position="Undergraduate Researcher" company="UC Berkeley: Barsky Lab" start="SEP 2022" 
-                                        location="Berkeley, CA" tools={['Research','VR','C++','Unity']} jobtype={1}/>
-                            <ResumeEntry position="Graphic Designer & Administrative Assistant" company="Berkeley Center for Law and Technology" start="OCT 2021" 
-                                        location="Berkeley, CA" tools={['Adobe InDesign','Adobe Illustrator','Salesforce','WordPress']} jobtype={0}/>
+                            <ResumeEntry position="BS Electrical Engineering & Computer Science" company="UC Berkeley" start="AUG 2019" end="MAY 2023"
+                                        location="Berkeley, CA" tools={['Algorithms','Artificial Intelligence (Python)','Building User-Centered Programming Tools','Computer Architecture (C)', 'Data Science (Pandas, SQL)', 'Data Structures (Java)', 'Graphics (C++)']} jobtype={1}/>
+                        </div> */}
 
-                        </div>
                         <div className={styles.resumetimelabel}>
-                            PREVIOUSLY
+                            EXPERIENCE
                         </div>
                         <div className={styles.resumedivider}/>
                         <div className={styles.resumejobgroup}>
+                            <ResumeEntry position="Full-Stack Software Engineering Intern" company="Bureau of Labor Statistics" start="JUN 2023" end="AUG 2023"
+                                        location="Remote" tools={['React','JavaScript','Express']} jobtype={1}/>
+                            {/* <ResumeEntry position="Undergraduate Researcher" company="UC Berkeley: Barsky Lab" start="SEP 2022" end="MAY 2023"
+                                        location="Berkeley, CA" tools={['Research','VR','C++','Unity']} jobtype={1}/> */}
+                            <ResumeEntry position="Graphic Designer & Administrative Assistant" company="Berkeley Center for Law and Technology" start="OCT 2021" end="JUN 2023"
+                                        location="Berkeley, CA" tools={['Adobe Creative Suite','Salesforce','WordPress','Excel']} jobtype={0}/>
                             <ResumeEntry position="Software Engineering Intern" company="Medtronic" start="JUN 2022" end="AUG 2022" 
                                         location="Northridge, CA" tools={['Python','Agile Development']} jobtype={1}/>
                             <ResumeEntry position="Software Engineering Intern" company="Geopogo" start="MAY 2021" end="SEP 2021" 
-                                        location="Berkeley, CA" tools={['Unity','Git','ReactJS','Figma']} jobtype={1}/>
+                                        location="Berkeley, CA" tools={['Unity','Git','React','Figma']} jobtype={1}/>
                         </div>
                         
                     </div>

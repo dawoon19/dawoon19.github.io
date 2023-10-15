@@ -1,0 +1,6 @@
+{"id": "barracudatech","key": "barracudatech","title": "Barracuda Technologies", "org":"Web Development at Berkeley", "photo": "BarraThumbnail.png", 
+    "links": {"Devpost": ""},
+    "link":"https://drive.google.com/file/d/1bn2ytyhVF_46TVP-_mFIKQIgCPUSo8wM/view?usp=sharing", "linkType":"n/a",
+    "desc":"In this project, my role as a product designer was revamping the visual style and structure of the website for <strong>Barracuda Technologies</strong>, a company that creates sustainable materials out of agricultural waste.", 
+    "isDesign": true, "isDev": false, "categories": ["Website"],
+    "tools": ["Figma"]}

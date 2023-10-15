@@ -39,10 +39,10 @@
     100% {transform:translateY(25px);}
 }
 
-#textFirstLine { font-weight:200;font-size:1.5em;letter-spacing: .1em;}
-#textSecondLine {font-weight: 700; font-size: 5em; letter-spacing: .3em;}
-#textThirdLine { font-weight: 300; font-size:1.25em; letter-spacing: .5em;}
-#textFourthLine { transform: translateY(50px); font-weight: 200; font-size:1em; letter-spacing: .1em;}
+#textFirstLine { font-weight:300;font-size:1.5em;letter-spacing: .1em; transition: font-size 0.25s linear}
+#textSecondLine {font-weight: 700; font-size: 5em; letter-spacing: .3em;transition: font-size 0.25s linear}
+#textThirdLine { font-weight: 300; font-size:1.4em; letter-spacing: .5em;transition: font-size 0.25s linear}
+#textFourthLine { transform: translateY(50px); font-weight: 300; font-size:1em; letter-spacing: .1em;transition: font-size 0.25s linear}
 
 .landingLink {
     cursor:pointer;
@@ -84,6 +84,7 @@
     height:100%;
 
     animation: landStart 1s ease-in-out;
+    overflow:hidden;
 }
 
 #designBG {
@@ -128,14 +129,14 @@
 .rotatingbg {
     position:relative;
     background-size:cover;
-    width:600px;
-    height:600px;
     filter:blur(4px);
     opacity:0.25;
     transform-origin:center;
     animation-name: rotateanimation;
     animation-duration: 120s;
     animation-iteration-count: infinite;
+    transition: width 0.25s linear, height 0.25s linear;
+    overflow-y:hidden;
 }
 
 #scrollingdesigns { background-image:url('../public/RotatingDesigns.png'); }
@@ -153,13 +154,39 @@
 /**
     Appendix I. Responsive Styling
 */
-@media screen and (max-width:650px) {
-    #textFirstLine { font-size: 1.25em; }
-    #textSecondLine { font-size: 3em; }
+@media screen and (max-width:400px) {
+    #textFirstLine { font-size: 1rem; }
+    #textSecondLine { font-size: 2.75rem; }
+    #textThirdLine { font-size:0.75em; }
+    #textFourthLine { font-size: 0.75em; }
+    #tabContainer { flex-direction: column;}
+    .rotatingbg { width:400px; height:400px;}
+}
+
+@media (min-width:400px) and (max-width:650px) {
+    #textFirstLine { font-size: 1.25rem; }
+    #textSecondLine { font-size: 3.5rem; }
     #textThirdLine { font-size:0.9em; }
     #textFourthLine { font-size: 0.75em; }
     #tabContainer { flex-direction: column;}
     .rotatingbg { width:400px; height:400px;}
+}
+
+@media (min-width:650px) and (max-width:1000px) {
+    .rotatingbg {
+        width:600px;
+        height:600px;
+    }
+}
+
+@media (min-width:1000px) {
+    .rotatingbg { 
+        width:1000px;
+        height:1000px;
+        overflow:hidden;
+        opacity:0.15;
+        filter:blur(6px);
+    }
 }
 
 /**

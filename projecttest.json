@@ -1,0 +1,53 @@
+
+{
+    "projectlore": 
+    {"id": "projectlore","key": "projectlore", "title": "Project Lore", "org":"Cal Hacks Hackathon", "photo": "ProjectLoreThumbnail.png", 
+    "links": {"Devpost": "https://devpost.com/software/research-health", "Figma": "https://www.figma.com/proto/y8hWSSoRtEoAnkEU7Bktdz/Hello%3AWorld-Draft?node-id=6%3A14&starting-point-node-id=6%3A14&scaling=scale-down-width"}, "role":"product designer",
+    "desc":"Created user interface and frontend for healthcare web app providing accurate medical advice via research articles annotated by verified users", 
+    "isDesign": true, "isDev": true, "categories": ["Website","Health"],"tools": ["Figma", "ReactJS", "UI/UX"],
+    "problem": {
+        "headline":"How"
+    },
+    "sections":[
+        {"type":"center",
+            "headline":"The Problem",
+            "desc":""
+        },
+        {"type":"left-display", 
+            "headline":"",
+            "desc":""
+        }
+    ]
+    },
+
+    "barracudatech":
+    {"id": "barracudatech","key": "barracudatech","title": "Barracuda Technologies", "org":"Web Development at Berkeley", "photo": "BarraThumbnail.png", 
+    "links": {"barra-labs.com": "https://barra-labs.com","Figma":""},
+    "desc":"In this project, my role as a product designer was revamping the visual style and structure of the website for Barracuda Technologies, a company that creates sustainable materials out of agricultural waste.", 
+    "isDesign": true, "isDev": false, "categories": ["Website"],
+    "tools": ["Figma","CSS","UI/UX"],
+    "problem": {
+        "headline":"Redesign the website structure and visual style for a more intuitive flow of information"
+    },
+    "sections":[
+        {"type":"center",
+            "headline":"The Problem",
+            "desc":""
+        },
+        {"type":"left-display", 
+            "headline":"",
+            "desc":"The original information flow appears out of order from a UX perspective. The webpage starts with the product itself and how users can use it without introducing what problem the company is solving (appearing at the end instead)."
+        }
+    ]
+    },
+
+    "personalwebsite":
+    {"id": "personalwebsite","key": "personalwebsite","title": "Personal Website", "org":"", "photo": "portfoliothumbnail.png", 
+    "links": {"Website": ""},
+    "desc":"I created this personal website from scratch, testing designs on Figma, implementing it using ReactJS, and deploying it using NextJS.", 
+    "isDesign": true, "isDev": false, "categories": ["Website"],
+    "tools": ["Figma", "ReactJS","NextJS","CSS"]},
+    "problem": {
+        "headline":""
+    }
+}

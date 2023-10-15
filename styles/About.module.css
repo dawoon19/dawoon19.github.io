@@ -107,7 +107,7 @@
     font-weight: 200;
     font-size:1em;
     letter-spacing: 0.05em;
-    width:320px;
+    width:340px;
     line-height: 1.4em;
     margin-left:60px;
     text-align: justify;
@@ -153,7 +153,7 @@
 .resumedivider {
     grid-column-start: 2;
     grid-column-end:3;
-    background-image: linear-gradient(white,white);
+    background-color: white;
     width:1px;
     height:200px;
     margin-left:50px;
@@ -186,6 +186,7 @@
 .toolList {
     display:flex;
     flex-wrap:wrap;
+    width:500px;
     align-items: center;
     margin-top:10px;
     margin-bottom:10px;
@@ -286,6 +287,7 @@
 
     .toolList {
         justify-content: center;
+        width:300px;
     }
 
     .jobTool { font-size:0.7em;}

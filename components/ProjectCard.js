@@ -5,6 +5,8 @@ import styles from '../styles/projectcard.module.css';
 import { useInViewport } from 'react-in-viewport';
 import { useRouter } from "next/router"
 
+import CategoryList from './CategoryList';
+
 // import { Icon } from '@iconify/react';
 // import devpostIcon from '@iconify-icons/simple-icons/devpost';
 
@@ -43,6 +45,7 @@ function ProjectCard({data, title, photo, category, link, linkType}) {
     }
 
     const categoryIsDesignDict = {"Figma":true,"Adobe InDesign":true,"Adobe Photoshop":true,"Adobe XD":true,"ibisPaintX":true,"Illustration":true,
+                                    "User Research":true,
                                     "C++":false,"Java":false,"Python":false,"Unity":false,
                                     "ReactJS":false,"NextJS":false,"CSS":false};
 
@@ -64,36 +67,38 @@ function ProjectCard({data, title, photo, category, link, linkType}) {
                 }
             </div>
 
-            <div className={styles.categories}>
-                {data.tools.map((tool) => 
-                    {
-                        if (categoryIsDesignDict[tool]) {
-                            return <p key={data.id+tool} className={styles.designCategory}>{tool}</p>
-                        } else {
-                            return <p key={data.id+tool} className={styles.devCategory}>{tool}</p>
+            <div className={styles.metadata}>
+                <CategoryList categories={data.categories}/>
+                
+                
+                {/* <div className={styles.categories}>
+                    {data.categories.map((category) => 
+                        {
+                            if (category == "UI/UX" || category == "Publications" || category == "Web Design") {
+                                return <p key={data.id+category} className={styles.designCategory}>{category}</p>
+                            } else {
+                                return <p key={data.id+category} className={styles.devCategory}>{category}</p>
+                            }
                         }
-                    }
-                )}
+                    )}
+                </div> */}
+
+                <h1 className={styles.cardHeadline}>{data.title}</h1>
+                <h1 className={styles.cardSubhead}>{data.org}</h1>
+                <div className={styles.categories}>
+                    {data.tools.map((tool) => 
+                        {
+                            if (categoryIsDesignDict[tool]) {
+                                return <p key={data.id+tool} className={styles.designCategory}>{tool}</p>
+                            } else {
+                                return <p key={data.id+tool} className={styles.devCategory}>{tool}</p>
+                            }
+                        }
+                    )}
+                </div>
+                <p className={styles.description}>{data.desc}</p>
+
             </div>
-            
-            
-            {/* <div className={styles.categories}>
-                {data.categories.map((category) => 
-                    {
-                        if (category == "UI/UX" || category == "Publications" || category == "Web Design") {
-                            return <p key={data.id+category} className={styles.designCategory}>{category}</p>
-                        } else {
-                            return <p key={data.id+category} className={styles.devCategory}>{category}</p>
-                        }
-                    }
-                )}
-            </div> */}
-
-            <h1 className={styles.cardHeadline}>{data.title}</h1>
-            <h1 className={styles.cardSubhead}>{data.org}</h1>
-
-
-            <p className={styles.description}>{data.desc}</p>
         </div>
     );
 }

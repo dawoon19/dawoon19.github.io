@@ -8,8 +8,8 @@
     align-items: center;
     /* animation: start 2s ease-in-out; */
     position:fixed;
+    overflow:hidden;
     z-index:5;
-    scroll-behavior: smooth;
 }
 
 .navbarstart {
@@ -45,7 +45,7 @@
     font-weight: 300;
     letter-spacing: 0.05em;
     cursor:pointer;
-    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, font-weight 0.25s ease-in-out;
+    transition: font-weight 0.25s ease-in-out;
     text-align: center;
     display:flex;
     justify-content: center;
@@ -126,6 +126,7 @@
 
     .navbar,.navbarstart {
         justify-content: space-between;
+        padding-top:70px;
     }
     #menuicon {
         cursor:pointer;
@@ -137,13 +138,14 @@
         margin-left:20px;
         margin-right:50px;
         z-index: 3;
-        transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.1s ease-in-out;
     }
-    .menuicon:hover{
+    #menuicon:hover{
         opacity:0.5;
     }
 
     #sidebar {
+        opacity:0;
         display:flex;
         flex-direction: column;
         justify-content: center;
@@ -171,6 +173,9 @@
         color:white;
         /* color:#52667C; */
         z-index:10;
+    }
+    .menuiconbar {
+        width:24px;
     }
 
     .menuitemmobile:hover {
