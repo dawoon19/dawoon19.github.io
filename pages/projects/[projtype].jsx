@@ -5,13 +5,26 @@ import HeadComponent from '../../components/HeadComp';
 import { useRouter } from 'next/router';
 import Error from '../../components/Error';
 
-export function generateStaticParams() {
-    return [{ projtype: 'design' }, { projtype: 'software' }, { projtype: 'visualart' }, { projtype: 'engineering' }]
-  }
+export async function getStaticPaths() {
+    return {
+        paths: [
+            {params: { projtype: 'design', }},
+            {params: { projtype: 'software', }},
+            {params: { projtype: 'visualart', }},
+            {params: { projtype: 'engineering',}},
+        ],
+        fallback:false
+    }
+}
 
-export default function ProjectTypePage() {
+export async function getStaticProps({params}) {
+    return { props: { projtype: params.projtype } }
+}
+
+export default function ProjectTypePage({projtype}) {
     const router = useRouter();
-    const { projtype } = router.query;
+    // const { projtype } = router.query;
+    // const { projtype } = params;
 
     switch (projtype) {
         case 'design':
