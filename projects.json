@@ -55,9 +55,9 @@
         "isDesign": false, "isDev": true, "categories": ["Research"],
         "tools": ["C++"]}, 
 
-        {"id": "softproj2","title": "Optimizing Music Composition", "org":"UC Berkeley | CS 294-184: Building User-Centered Programming Tools", "photo": "bubblethumbnail.png", 
+        {"id": "softproj2","title": "Optimizing Music Composition", "org":"UC Berkeley | CS 294-184: Building User-Centered Programming Tools", "photo": "optimizedmusic.png", 
         "link":"https://github.com/skberkeley/guido-sharp/tree/named_chord", "linkType":"n/a",
-        "desc":"Conducted and analyzed user studies for research paper on finding and addressing needs in digital music composition", 
+        "desc":"Conducted user research on finding needs in music composition and implemented musical structure generation from shorthand notation", 
         "isDesign": false, "isDev": true, "categories": ["Research"],
         "tools": ["Python", "User Research"]}, 
 
