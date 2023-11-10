@@ -1,25 +1,20 @@
-import { useEffect, useRef, createRef} from 'react'
+import { useRef} from 'react'
 
-import styles from '../styles/projectcard.module.css';
-
-import { useInViewport } from 'react-in-viewport';
 import { useRouter } from "next/router"
 
 import CategoryList from './CategoryList';
 
 // import { Icon } from '@iconify/react';
 // import devpostIcon from '@iconify-icons/simple-icons/devpost';
-
+import useCardVisibiliity from '../hooks/renderOnScroll';
 import { AiOutlineLink } from 'react-icons/ai'
 
-function ProjectCard({data, title, photo, category, link, linkType}) {
+function ProjectCard({data}) {
+    const ref = useRef(null);
+    const isVisible = useCardVisibiliity(ref);
 
     let url = "url(../"+data.photo+")";
     const router = useRouter();
-
-    useEffect(()=>{
-
-    },[])
 
     function CategoryBG() {
         var color;
@@ -33,7 +28,7 @@ function ProjectCard({data, title, photo, category, link, linkType}) {
             color="#FFC700";
         }
 
-        return <div className={styles.designBG} style={{background:color}}/>
+        return <div className='designBG' style={{background:color}}/>
     }
 
     function ThumbnailIcon() {
@@ -49,58 +44,36 @@ function ProjectCard({data, title, photo, category, link, linkType}) {
                                     "C++":false,"Java":false,"Python":false,"Unity":false,
                                     "ReactJS":false,"NextJS":false,"CSS":false};
 
-    return (
-        <div className={styles.card} >
-            <div className={styles.thumbnail}>
-                <CategoryBG/>
-                <div className={styles.cardBG} 
-                    style={{
-                        backgroundImage:url,
-                    }}/>
-
+    return <div ref={ref} className={isVisible ? 'card' : 'card invisible'}>
+        <div className='thumbnail'>
+            <CategoryBG/>
+            <div className='cardBG' style={{ backgroundImage:url }}/>
                 { data.link != "" &&
-                    (<div className={styles.overlayBG}>
-                            <ThumbnailIcon/>
-                            <a href={data.link} title="" target="_blank" className={styles.projectLink}>See Project</a>
-                        
+                    (<div className='overlayBG'>
+                        <ThumbnailIcon/>
+                        <a href={data.link} title="" target="_blank" className='projectLink'>See Project</a>
                     </div>)
                 }
             </div>
 
-            <div className={styles.metadata}>
-                <CategoryList categories={data.categories}/>
-                
-                
-                {/* <div className={styles.categories}>
-                    {data.categories.map((category) => 
-                        {
-                            if (category == "UI/UX" || category == "Publications" || category == "Web Design") {
-                                return <p key={data.id+category} className={styles.designCategory}>{category}</p>
-                            } else {
-                                return <p key={data.id+category} className={styles.devCategory}>{category}</p>
-                            }
-                        }
-                    )}
-                </div> */}
+        <div className='metadata'>
+            <CategoryList categories={data.categories}/>
 
-                <h1 className={styles.cardHeadline}>{data.title}</h1>
-                <h1 className={styles.cardSubhead}>{data.org}</h1>
-                <div className={styles.categories}>
-                    {data.tools.map((tool) => 
-                        {
-                            if (categoryIsDesignDict[tool]) {
-                                return <p key={data.id+tool} className={styles.designCategory}>{tool}</p>
-                            } else {
-                                return <p key={data.id+tool} className={styles.devCategory}>{tool}</p>
-                            }
-                        }
-                    )}
-                </div>
-                <p className={styles.description}>{data.desc}</p>
-
+            <h1>{data.title}</h1>
+            <h2>{data.org}</h2>
+            <div className='categories'>
+                {data.tools.map((tool) => {
+                    if (categoryIsDesignDict[tool]) {
+                        return <p key={data.id+tool} className='darkredbg projtool'>{tool}</p>
+                    } else {
+                        return <p key={data.id+tool} className='darkbluebg projtool'>{tool}</p>
+                    }
+                })}
             </div>
+            <p className='description'>{data.desc}</p>
+
         </div>
-    );
+    </div>
 }
 
 export default ProjectCard;

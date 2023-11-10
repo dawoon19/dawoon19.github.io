@@ -31,11 +31,6 @@ export default function ProjPage(props) {
     // const bg = data.photo;
     // const bgurl = "url(/" + bg + ")";
 
-    function Component(props) {
-        
-        return <div> {props.data} </div>
-    }
-
     function goTo(id) {
         const section = document.getElementById(id);
         section.scrollIntoView({ behavior: 'smooth'});
@@ -90,6 +85,7 @@ export default function ProjPage(props) {
                         <div className={styles.contentcontainer}>
                             <h3>{data.problem.headline}</h3>
                         </div>
+                        
                     </div>
                     }
                 </div>

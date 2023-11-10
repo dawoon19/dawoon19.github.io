@@ -1,4 +1,4 @@
-import styles from '../styles/Projects.module.css'
+
 import ProjectCard from '../components/ProjectCard';
 import projectData from '../projects.json';
 import {useState} from 'react';
@@ -8,8 +8,6 @@ import { useRouter } from 'next/router';
 import { BsFillCursorFill, BsFillFileEarmarkCodeFill, BsPaletteFill, BsWrench } from 'react-icons/bs';
 import HeadComponent from '../components/HeadComp';
 
-
-
 export default function GeneralProjects() {
     const router = useRouter();
     const Box = (props) => {
@@ -18,35 +16,41 @@ export default function GeneralProjects() {
                 var bgcolor = "#D45168";
                 var typetitle = "PRODUCT DESIGNS";
                 var pagelink = "projects/design";
-                var caption = "User interface, experience, and interaction designs for web/mobile products";
+                var caption = "User interface, experience, and interaction designs";
                 var icon = <BsFillCursorFill color="white" size={30}/>;
+                var animId = 'anim1';
                 break;
             case 1: 
                 var bgcolor = "#4374BE";
                 var typetitle = "SOFTWARE PROJECTS";
                 var pagelink = "projects/software";
-                var caption = "Programming and software work for academic, industrial, or personal projects";
+                var caption = "Programming and software work";
                 var icon = <BsFillFileEarmarkCodeFill color="white" size={30}/>;
+                var animId = 'anim2';
                 break;
             case 2:
                 var bgcolor = "#D45168";
                 var typetitle = "GRAPHIC DESIGN & VISUAL ART";
                 var pagelink = "projects/visualart";
-                var caption = "Illustrations, publication, marketing, or other visual art/designs I have made";
+                var caption = "Illustrations, publication, marketing, or other visual art/designs";
                 var icon = <BsPaletteFill color="white" size={30}/>;
+                var animId = 'anim3';
                 break;
             default:
                 var bgcolor = "#4374BE";
                 var typetitle = "ENGINEERING PROJECTS";
                 var pagelink = "projects/engineering";
-                var caption = "Mechanical/electrical engineering or industrial design projects I have worked on";
+                var caption = "Mechanical/electrical engineering or industrial design projects";
                 var icon = <BsWrench color="white" size={30}/>;
+                var animId = 'anim4';
                 break;
         }
-    
+        var delay = String(props.projtype*2) + 's';
+        console.log('delay: ', delay)
+
         return (
-            <div className={styles.boxContainer}>
-                <div className={styles.projecttypebox} style={{backgroundColor:bgcolor}} onClick={()=>router.push(pagelink)}>
+            <div className='box-container' id={animId}>
+                <div className='projecttypebox'style={{backgroundColor:bgcolor, animation: delay}} onClick={()=>router.push(pagelink)}>
                     {icon}
                     <a>{typetitle}</a>
                 </div>
@@ -59,18 +63,17 @@ export default function GeneralProjects() {
         <>
             <HeadComponent/>
             <NavBar/>
-            <div className={styles.projecthome}>
-                <div className={styles.textContainer}>
-                    <h4>
-                        PORTFOLIO
-                    </h4>
+            <div className='page'>
+                <div className='container'>
+                    <h1> PORTFOLIO </h1>
                 </div>
-                <div className={styles.projectportalcontainer}>
+                <div className='projectportalcontainer'>
                     <Box projtype={0}/>
                     <Box projtype={1}/>
                     <Box projtype={2}/>
                     <Box projtype={3}/>
                 </div>
+                
             </div>
         </>
     );

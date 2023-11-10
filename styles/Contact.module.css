@@ -2,8 +2,6 @@
     position:relative;
     background-color: #0C2848;
     color:white;
-    /* background-color: #EBF0F6;
-    color: #52667C; */
     width:100vw;
     height:100vh;
 
@@ -72,6 +70,36 @@
 #linkedin {
     background-color: #629bf0;
     /* background-image: radial-gradient(#629bf0, #4374BE); */
+    margin-bottom:100px;
+}
+
+.input {
+    margin:5px;
+    padding:10px;
+    border-radius: 20px;
+    font-family:'Lexend Deca';
+    font-weight:300;
+}
+
+.textarea {
+    margin:5px;
+    padding:10px;
+    border-radius: 20px;
+    font-family:'Lexend Deca';
+    font-weight:300;
+    height:100px;
+    min-width:380px;
+    max-width:380px;
+}
+
+.submit {
+    background-color: #629bf0;
+    font-family:'Lexend Deca';
+    font-weight:700;
+    padding:20px;
+    border:none;
+    margin:10px;
+    border-radius:10px;
 }
 
 @keyframes contactstart {

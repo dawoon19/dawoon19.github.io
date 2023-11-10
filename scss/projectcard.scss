@@ -1,22 +1,26 @@
+@use "globals";
+
 .card {
     width:350px;
     height:500px;
     border-radius: 15px;
     margin:50px 50px 0px 50px;
     color:white;
-    /* color: #52667C; */
     display:flex;
     flex-direction: column;
     align-items: center;
+    opacity:1;
+    transform:translateY(0);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
 
-    /* background-color:khaki; */
-    animation-name: cardShows;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
+.invisible {
+    opacity:0;
+    transform:translateY(50px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 /* SECTION I. Thumbnail */
-
 .thumbnail {
     display:flex;
     color:white;
@@ -68,24 +72,24 @@
     transition: opacity 0.25s ease-out, width 0.25s ease-out, height 0.25s ease-out, margin-bottom 0.25s ease-out;
 }
 
-.thumbnail:hover .overlayBG{
-    width:300px;
-    height:230px;
-    opacity:1;
-}
-.thumbnail:hover .cardBG{
-    width:300px;
-    height:230px;
-}
-
-.thumbnail:hover .designBG{
-    width:300px;
-    height:230px;
-    opacity:0.75;
+.thumbnail:hover {
+    .overlayBG{
+        width:300px;
+        height:230px;
+        opacity:1;
+    }
+    .cardBG{
+        width:300px;
+        height:230px;
+    }
+    .designBG{
+        width:300px;
+        height:230px;
+        opacity:0.75;
+    }
 }
 
 /* SECTION II. Text */
-
 .metadata {
     width:auto;
     height:auto;
@@ -95,25 +99,19 @@
     align-items: center;
 }
 
-.cardHeadline {
-    position:relative;
-    font-weight:700;
+.card h1 {
     font-size:1.25em;
-    text-align: center;
-    transition: top 0.25s ease-out;
-    /* margin:5px; */
-    margin-top:10px;
-    margin-bottom:0;
+    position:relative;
+    margin: 10px 0 0 0;
     letter-spacing:0.05em;
-    /* box-shadow: 0px 0px 50px rgba(0,0,0,0.25); */
 }
 
-.cardSubhead {
+.card h2 {
     font-weight:500;
+    letter-spacing:0.05em;
     font-size:15px;
-    text-align: center;
     color:rgba(255,255,255,0.5);
-    /* color: #52667C; */
+    text-align:center;
 }
 
 .projectLink {
@@ -144,25 +142,13 @@
     align-items: center;
 }
 
-.designCategory {
+.projtool {
     padding: 10px 20px 10px 20px;
     margin-left:5px;
     margin-right:5px;
-    background-color:#9F2950;
     border-radius: 30px;
     font-weight: 300;
     font-size:12px;
-}
-
-.devCategory {
-    padding: 10px 20px 10px 20px;
-    margin-left:5px;
-    margin-right:5px;
-    background-color:#3B6AB0;
-    border-radius: 30px;
-    font-weight: 300;
-    font-size:12px;
-    
 }
 
 .description {
@@ -174,9 +160,4 @@
     text-align: center;
     letter-spacing: 1px;
     line-height: 1.25em;
-}
-
-@keyframes cardShows {
-    from { opacity: 0; margin-top:100px; }
-    to { opacity: 1; margin-top:50px; }
 }
