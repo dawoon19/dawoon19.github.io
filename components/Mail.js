@@ -18,9 +18,6 @@ export default function EmailForm(props) {
   const submit = (e) => {
       e.preventDefault();
 
-      let service_id = process.env.NEXT_PUBLIC_SERVICE_ID;
-      console.log(service_id);
-
       let valid = true;
       let emailValid = formData['email'] !== '' && formData['email'].toLowerCase().match(
           /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -65,7 +62,7 @@ export default function EmailForm(props) {
     let service_id = process.env.NEXT_PUBLIC_SERVICE_ID;
     let template_id = process.env.NEXT_PUBLIC_TEMPLATE_ID;
     let key = process.env.NEXT_PUBLIC_PUBLIC_ID;
-    
+
     const templateparams = {
       from_name: formData['name'] + " - " + formData['email'],
       to_name: "You",
