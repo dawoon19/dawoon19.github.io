@@ -1,12 +1,13 @@
-
-import styles from '../../styles/Projects.module.css'
 import ProjectCard from '../../components/ProjectCard';
 import projectData from '../../projects.json';
-import {useState, useEffect} from 'react';
 import NavBar from '../../components/NavBar';
 import HeadComponent from '../../components/HeadComp';
 import { useRouter } from 'next/router';
 import Error from '../../components/Error';
+
+export function generateStaticParams() {
+    return [{ projtype: 'design' }, { projtype: 'software' }, { projtype: 'visualart' }, { projtype: 'engineering' }]
+  }
 
 export default function ProjectTypePage() {
     const router = useRouter();
