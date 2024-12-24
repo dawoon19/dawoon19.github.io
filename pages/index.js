@@ -1,22 +1,11 @@
 import HeadComponent from '../components/HeadComp'
-import Image from 'next/image'
-
-import {useState, useEffect} from 'react'
+import {useState } from 'react'
 
 import styles from '../styles/Home.module.css'
 
-import { Link, Element } from "react-scroll";
-
 import NavBar from '../components/NavBar'
-import ProjectCard from '../components/ProjectCard'
 import Landing from '../components/Landing'
 import ProjectPage from '../components/ProjectPage'
-
-// Icons
-import { BsGearFill } from 'react-icons/bs'
-import {HiPencil} from 'react-icons/hi'
-
-import projectData from '../projects.json';
 
 export default function Home() {
 

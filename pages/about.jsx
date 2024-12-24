@@ -54,8 +54,8 @@ export default function About(props) {
                             <div id='profilepicoverlay' className='profilepicframe'/>
                         </div>
                         <div id='profilesummary'>
-                            Hello! My name is Daniel, and I'm a designer and software engineer with a BS in <a className={styles.devTxt}>Electrical Engineering & Computer Science</a> and BA in <a className={styles.desTxt}>Cognitive Science</a> from UC Berkeley! 
-                            I enjoy building human-centered products with optimized user experiences and visual aesthetics. Nice to meet you!
+                            Hello! My name is Daniel, and I'm a product designer and full-stack software engineer currently pursuing a <a className={styles.devTxt}>Master of Engineering</a> in <a className={styles.devTxt}>Electrical Engineering & Computer Sciences (EECS)</a> at UC Berkeley! 
+                            I enjoy building human-centered products with optimal user experiences and visual aesthetics. Nice to meet you!
                         </div>
                     </div>
 

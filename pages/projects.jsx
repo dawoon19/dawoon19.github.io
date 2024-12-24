@@ -1,7 +1,3 @@
-
-import ProjectCard from '../components/ProjectCard';
-import projectData from '../projects.json';
-import {useState} from 'react';
 import NavBar from '../components/NavBar';
 import { useRouter } from 'next/router';
 

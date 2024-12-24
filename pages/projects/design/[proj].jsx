@@ -3,7 +3,7 @@ import styles from '../../../styles/ProjectPage.module.css'
 import NavBar from '../../../components/NavBar';
 import { useRouter } from 'next/router';
 import HeadComponent from '../../../components/HeadComp';
-import projectData from '../../../projecttest.json';
+import projectData from '../../../data/casestudies.json';
 
 import { useEffect, useState } from 'react';
 

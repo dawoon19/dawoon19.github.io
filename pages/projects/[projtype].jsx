@@ -1,5 +1,5 @@
 import ProjectCard from '../../components/ProjectCard';
-import projectData from '../../projects.json';
+import projectData from '../../data/projects.json';
 import NavBar from '../../components/NavBar';
 import HeadComponent from '../../components/HeadComp';
 import { useRouter } from 'next/router';
