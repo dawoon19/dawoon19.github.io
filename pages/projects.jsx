@@ -3,6 +3,8 @@ import { useRouter } from 'next/router';
 
 import { BsFillCursorFill, BsFillFileEarmarkCodeFill, BsPaletteFill, BsWrench } from 'react-icons/bs';
 import HeadComponent from '../components/HeadComp';
+import Highlight from '../components/Highlight';
+import data from '../data/highlights.json';
 
 export default function GeneralProjects() {
     const router = useRouter();
@@ -63,11 +65,21 @@ export default function GeneralProjects() {
                 <div className='container'>
                     <h1> PORTFOLIO </h1>
                 </div>
+                <div className='highlightcontainer'>
+                    {data.map((project, idx)=> {
+                        return <Highlight right={idx % 2 == 1} data={project}/>
+                    } )}
+                    {/* <Highlight/>
+                    <Highlight right={true}/> */}
+                </div>
+                <h3> SEE MORE OF MY WORK</h3>
                 <div className='projectportalcontainer'>
+                    
                     <Box projtype={0}/>
                     <Box projtype={1}/>
                     <Box projtype={2}/>
                     <Box projtype={3}/>
+                    
                 </div>
                 
             </div>

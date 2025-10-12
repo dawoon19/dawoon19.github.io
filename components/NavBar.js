@@ -14,12 +14,12 @@ export default function NavBar(props) {
     }
 
     const Bar = () => {
-        return <div className={styles.menuiconbar}></div>
+        return <div className="menuiconbar"></div>
     }
     var isSidebarOn = false;
     function showSidebar() {
-        const elem = document.getElementById(styles.sidebar);
-        const menicon = document.getElementById(styles.menuicon);
+        const elem = document.getElementById("sidebar");
+        const menicon = document.getElementById("menuicon");
         const bar1 = menicon.children[0];
         const bar2 = menicon.children[1];
         const bar3 = menicon.children[2];
@@ -43,8 +43,8 @@ export default function NavBar(props) {
     }
 
     const MenuIcon = () => {
-        return <a id={styles.menuicon} onClick={showSidebar}>
-            <Bar id={styles.bar1}/><Bar id={styles.bar1}/><Bar id={styles.bar1}/>
+        return <a id="menuicon" onClick={showSidebar}>
+            <Bar id="bar1"/><Bar id="bar1"/><Bar id="bar1"/>
         </a>
     }
 
@@ -62,11 +62,11 @@ export default function NavBar(props) {
     }
 
     const MobileSidebar = () => {
-        return <div id={styles.sidebar}>
-            <Tabs tabNum={0} style={styles.menuitemmobile}/>
-            <Tabs tabNum={1} style={styles.menuitemmobile}/>
-            <Tabs tabNum={2} style={styles.menuitemmobile}/>
-            <Tabs tabNum={3} style={styles.menuitemmobile}/>
+        return <div id="sidebar">
+            <Tabs tabNum={0} style="menuitemmobile"/>
+            <Tabs tabNum={1} style="menuitemmobile"/>
+            <Tabs tabNum={2} style="menuitemmobile"/>
+            <Tabs tabNum={3} style="menuitemmobile"/>
         </div>
     }
 
@@ -74,11 +74,11 @@ export default function NavBar(props) {
         <div className={props.isHome==true ? styles.navbarstart : styles.navbar}>
             <div className={styles.navMask}></div>
 
-            <Tabs tabNum={0} style={styles.menuitem}/>
-            <Tabs tabNum={1} style={styles.menuitem}/>
-            <div className={styles.logo} onClick={()=>router.push("/")}/>
-            <Tabs tabNum={2} style={styles.menuitem}/>
-            <Tabs tabNum={3} style={styles.menuitem}/>
+            <Tabs tabNum={0} style="menuitem"/>
+            <Tabs tabNum={1} style="menuitem"/>
+            <div className="logo" onClick={()=>router.push("/")}/>
+            <Tabs tabNum={2} style="menuitem"/>
+            <Tabs tabNum={3} style="menuitem"/>
             <MenuIcon/>
         </div>
         <MobileSidebar/>

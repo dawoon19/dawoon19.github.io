@@ -1,10 +1,15 @@
+@use 'globals';
+
 .body {
     position:absolute;
     background-color: #0C2848;
+    /* color: #52667C; */
+    /* background-color: #EBF0F6; */
     color:white;
     width:100%;
     height:100%;
     z-index:0;
+    /* overflow-x:hidden; */
 }
 
 /** I. Landing Section Styling */
@@ -16,18 +21,17 @@
     display:flex;
     justify-content: center;
     align-items: center;
-}
-
-.textContainer {
-    transform:translateY(25px);
-    position:absolute;
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
-    line-height: 1.5;
-    animation-name: landingTextEnter;
-    animation-duration: 0.8s;
+    >.textContainer {
+        transform:translateY(25px);
+        position:absolute;
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        line-height: 1.5;
+        animation-name: landingTextEnter;
+        animation-duration: 0.8s;
+    }
 }
 
 @keyframes landingTextEnter {
@@ -37,9 +41,31 @@
 }
 
 #textFirstLine { font-weight:300;font-size:1.5em;letter-spacing: .1em; transition: font-size 0.25s linear}
-#textSecondLine {font-weight: 700; font-size: 5em; letter-spacing: .3em;transition: font-size 0.25s linear}
+#textSecondLine {font-weight: 700; font-size: 5em; letter-spacing: .3em;transition: font-size 0.25s linear; font-family: 'Lexend Tera', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;}
 #textThirdLine { font-weight: 300; font-size:1.4em; letter-spacing: .5em;transition: font-size 0.25s linear}
-#textFourthLine { transform: translateY(50px); font-weight: 300; font-size:1em; letter-spacing: .1em;transition: font-size 0.25s linear}
+#textFourthLine { 
+    transform: translateY(50px);
+    font-weight: 300;
+    font-size:1em;
+    letter-spacing: .1em;
+    transition: font-size 0.25s linear;
+    // background-color:white;
+    background-color: transparent;
+    padding:25px;
+    // color:transparent;
+    cursor: pointer;
+    border: 2px white solid;
+    border-radius: 0;
+    color:white;
+    font-weight: 500;
+    transition: background-color 0.1s linear, color 0.1s linear;
+
+    &:hover {
+        background-color: white;
+        color:globals.$red;
+    }
+}
 
 .landingLink {
     cursor:pointer;
@@ -48,7 +74,6 @@
     background-position: bottom left;
     background-size: 0 3px;
     background-repeat: no-repeat;
-
     transition: 
         font-weight 0.2s ease-in-out, 
         background-size 0.2s ease-out,

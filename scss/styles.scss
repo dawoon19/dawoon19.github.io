@@ -1,11 +1,11 @@
-@import "globals";
+@use "globals";
 
 // PAGE-SPECIFIC STYLING
-@import "nav";
-@import "home";
-@import "projportal";
-@import "projects";
-@import "projectpage";
-@import "about";
-@import "contact";
-@import "projectcard";
+@use "nav";
+@use "home";
+@use "projportal";
+@use "projects";
+@use "projectpage";
+@use "about";
+@use "contact";
+@use "projectcard";

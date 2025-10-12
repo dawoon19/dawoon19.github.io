@@ -40,7 +40,8 @@
 }
 
 #textFirstLine { font-weight:300;font-size:1.5em;letter-spacing: .1em; transition: font-size 0.25s linear}
-#textSecondLine {font-weight: 700; font-size: 5em; letter-spacing: .3em;transition: font-size 0.25s linear}
+#textSecondLine {font-weight: 700; font-size: 5em; letter-spacing: .3em;transition: font-size 0.25s linear; font-family: 'Lexend Zetta', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;}
 #textThirdLine { font-weight: 300; font-size:1.4em; letter-spacing: .5em;transition: font-size 0.25s linear}
 #textFourthLine { transform: translateY(50px); font-weight: 300; font-size:1em; letter-spacing: .1em;transition: font-size 0.25s linear}
 

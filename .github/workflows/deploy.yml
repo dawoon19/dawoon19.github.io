@@ -1,0 +1,33 @@
+name: Build & publish static site to main
+
+on:
+  push:
+    branches: [multipagereact]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Use Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy `out/` to main
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: main          # target branch to overwrite
+          folder: out           # the directory to publish
+          clean: true           # remove old files
+          single-commit: true   # keep history small

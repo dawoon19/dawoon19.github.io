@@ -1,0 +1,18 @@
+[
+    {"id": "highlight0","title": "AI Teammate for Collaborative Design", "org":"UC Berkeley Co-Design Lab", "photo": "aidesignthumbnail.png", 
+    "link":"/projects/codesign", "linkType":"n/a",
+    "desc":"AI web application that listens to and watches collaborative design whiteboarding and provides feedback for guiding design direction and ideation.", 
+    "isDesign": true, "isDev": true, "categories": ["AI/ML","Research"],"tools": ["Figma", "ReactJS","Flask"]},
+
+    {"id": "highlight1","title": "Semi-Automated Tumor Treatment Planning", "org":"Master of Engineering Capstone", "photo": "accuplanthumbnail.png", 
+    "link":"", "linkType":"n/a",
+    "desc":"CT image processing and training ML segmentation model to identify ideal 3D areas for noninvasive tumor treatment to facilitate surgical planning.", 
+    "isDesign": true, "isDev": true, "categories": ["AI/ML"],"tools": ["Python", "PyTorch"]},
+
+    {"id": "highlight2","title": "SnapChest", "org":"Cal Hacks Hackathon 2024", "photo": "snapchest_transparent.png", 
+    "link":"https://devpost.com/software/spectacles-treasure-hunt", "linkType":"n/a",
+    "desc":"Treasure hunt exploration game for Snap AR Spectacles with smartphone haptic feedback control and AR minigames.", 
+    "isDesign": true, "isDev": true, "categories": ["AR/VR","Game Design"],"tools": ["Python", "PyTorch"]}
+
+
+]

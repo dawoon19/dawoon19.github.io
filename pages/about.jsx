@@ -54,8 +54,8 @@ export default function About(props) {
                             <div id='profilepicoverlay' className='profilepicframe'/>
                         </div>
                         <div id='profilesummary'>
-                            Hello! My name is Daniel, and I'm a product designer and full-stack software engineer currently pursuing a <a className={styles.devTxt}>Master of Engineering</a> in <a className={styles.devTxt}>Electrical Engineering & Computer Sciences (EECS)</a> at UC Berkeley! 
-                            I enjoy building human-centered products with optimal user experiences and visual aesthetics. Nice to meet you!
+                            I am a product designer and full-stack software engineer with a <a className={styles.devTxt}>Master of Engineering</a> in <a className={styles.devTxt}>Electrical Engineering & Computer Sciences (EECS)</a> from UC Berkeley.
+                            I enjoy building data-driven, human-centered products that enhance user productivity and experience. Great to meet you!
                         </div>
                     </div>
 

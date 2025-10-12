@@ -21,10 +21,10 @@ export default function CategoryList(props) {
                         }
 
     return (
-        <div className={styles.categoryList}>
+        <div className="categoryList">
             {props.categories.map((cat)=>{
-                return <div key={cat} className={styles.category}>
-                        {categoryDict[cat]}{cat} <div className={styles.separator}>&nbsp;&nbsp;•&nbsp;&nbsp;</div> 
+                return <div key={cat} className="category">
+                        {categoryDict[cat]}{cat} <div className="separator">&nbsp;&nbsp;•&nbsp;&nbsp;</div> 
                     </div>
             })}
         </div>

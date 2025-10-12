@@ -49,7 +49,7 @@
             "isDesign": false, "isDev": true, "categories": ["Game Design"],
             "tools": ["Java"]},
 
-            {"id": "softproj7", "title": "SnapChest: Smartphone Haptic Feedback Control for Snap AR Spectacles", "org":"Cal Hacks Hackathon", "photo": "snapchest.jpg", 
+            {"id": "softproj7", "title": "SnapChest", "org":"Cal Hacks Hackathon", "photo": "snapchest.jpg", 
             "link":"https://devpost.com/software/spectacles-treasure-hunt", "linkType":"n/a",
             "desc":"Created information architecture, game design, and animations for AR glasses treasure hunt experience", 
             "isDesign": true, "isDev": true, "categories": ["AR/VR", "Game Design"],"tools": ["Figma", "TypeScript", "Lens Studio"]},
