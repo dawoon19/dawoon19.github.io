@@ -27,7 +27,7 @@ jobs:
       - name: Deploy `out/` to main
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: main          # target branch to overwrite
+          branch: master          # target branch to overwrite
           folder: out           # the directory to publish
           clean: true           # remove old files
           single-commit: true   # keep history small
