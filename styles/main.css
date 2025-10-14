@@ -896,6 +896,7 @@ HIGHLIGHTS
 .casestudy-page section {
   margin: 0;
   width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -988,7 +989,6 @@ HIGHLIGHTS
   justify-content: center;
   align-items: center;
   width: 70%;
-  height: 100vh;
   margin-top: 50px;
   margin-bottom: 50px;
   text-align: center;
