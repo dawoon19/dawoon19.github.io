@@ -51,8 +51,8 @@ export default function About(props) {
                         <div id='profilepic-container'>
                             <div id='redprofilebg' className='profilepicframe'/>
                             <div id='blueprofilebg' className='profilepicframe'/>
-                            <div id='profilepic' className='profilepicframe'/>
-                            <div id='profilepicoverlay' className='profilepicframe'/>
+                            <div id='profilepic' className='profilepicframe' style={{backgroundImage:'url(../profilepic.png'}}/>
+                            <div id='profilepicoverlay' className='profilepicframe' style={{backgroundImage:'url(../profilepicfiltered.png'}}/>
                         </div>
                         <div id='profilesummary'>
                             I am a product designer and full-stack software engineer with a <a className='devTxt'>Master of Engineering</a> in <a className='devTxt'>Electrical Engineering & Computer Sciences (EECS)</a> from UC Berkeley.

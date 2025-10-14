@@ -76,7 +76,7 @@ export default function NavBar(props) {
 
             <Tabs tabNum={0} style="menuitem"/>
             <Tabs tabNum={1} style="menuitem"/>
-            <div className="logo" onClick={()=>router.push("/")}/>
+            <div className="logo" style={{backgroundImage:'url(../DWLogoWhite.svg)'}} onClick={()=>router.push("/")}/>
             <Tabs tabNum={2} style="menuitem"/>
             <Tabs tabNum={3} style="menuitem"/>
             <MenuIcon/>

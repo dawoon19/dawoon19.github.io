@@ -21,10 +21,10 @@ export default function Landing(props) {
         <div id="landing">
             <div id="landingBGContainer">
                 <div id="devBG">
-                    <div className="rotatingbg" id="scrollingdev"></div>
+                    <div className="rotatingbg" style={{backgroundImage:'url(../RotatingDev.png)'}}></div>
                 </div>
                 <div id="designBG">
-                    <div className="rotatingbg" id="scrollingdesigns"></div>
+                    <div className="rotatingbg" style={{backgroundImage:'url(../RotatingDesigns.png)'}}></div>
                 </div>
             </div>
             
