@@ -1,7 +1,7 @@
 import HeadComponent from '../components/HeadComp'
 import {useState } from 'react'
 
-import styles from '../styles/Home.module.css'
+// import styles from '../styles/Home.module.css'
 
 import NavBar from '../components/NavBar'
 import Landing from '../components/Landing'
@@ -27,7 +27,7 @@ export default function Home() {
   }
 
   return (
-    <div className={styles.body}>
+    <div className='body'>
       <HeadComponent/>
       <NavBar isHome={true}/>
       <Landing/>

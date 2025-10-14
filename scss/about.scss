@@ -141,11 +141,17 @@
 .resumepos {
     font-weight:700;
     font-size:1.2em;
+    text-transform: uppercase;
+    font-family:'Lexend Tera';
+    letter-spacing: 0;
+    max-width:480px;
 }
 
 .resumecompany {
     font-weight:500;
     font-size:0.9em;
+    text-transform: uppercase;
+    opacity:0.5;
 }
 
 .resumedata {
@@ -175,7 +181,7 @@
 }
 
 .jobTool:hover {
-    color: #0C2848;
+    color: globals.$page-bg;
     background-color: white;
 }
 

@@ -10,7 +10,8 @@ export default function EmailForm(props) {
     name: '',
     email: '',
     subject:'',
-    message: ''
+    message: '',
+    access_key: 'b31ad7a0-559c-43a2-8b3f-7b4b7f4d5b28'
   });
 
   const {register, reset, handleSubmit} = useForm();
@@ -19,7 +20,7 @@ export default function EmailForm(props) {
       setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const submit = (e) => {
+  const activateLoading = () => {
     let button = document.querySelector('button')
     button.classList.remove('enabled');
     button.textContent = 'SENDING';
@@ -27,125 +28,166 @@ export default function EmailForm(props) {
     let dot1 = document.createElement('div');
     dot1.classList.add('loading-dot');
     dot1.textContent = '.';
-    
     dot1.style.animationDelay = '0s';
+
     let dot2 = document.createElement('div');
     dot2.classList.add('loading-dot');
     dot2.textContent = '.'
     dot2.style.animationDelay = '0.25s';
+
     let dot3 = document.createElement('div');
     dot3.classList.add('loading-dot');
     dot3.textContent = '.'
     dot3.style.animationDelay = '0.5s';
+
     button.appendChild(dot1);
     button.appendChild(dot2);
     button.appendChild(dot3);
-
-    sendEmail();
-      // e.preventDefault();
-
-      // let valid = true;
-      // let emailValid = formData['email'] !== '' && formData['email'].toLowerCase().match(
-      //     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-      // );
-      
-      // if (formData['name'].length === 0 || !emailValid || formData['subject'].length === 0 || formData['message'].length === 0) {
-      //     valid = false;
-      // }
-      // console.log(emailValid)
-      
-      // if (valid) {
-      //   let button = document.querySelector('button')
-      //   button.classList.remove('enabled');
-      //   button.textContent = 'SENDING';
-
-      //   let dot1 = document.createElement('div');
-      //   dot1.classList.add('loading-dot');
-      //   dot1.textContent = '.';
-        
-      //   dot1.style.animationDelay = '0s';
-      //   let dot2 = document.createElement('div');
-      //   dot2.classList.add('loading-dot');
-      //   dot2.textContent = '.'
-      //   dot2.style.animationDelay = '0.25s';
-      //   let dot3 = document.createElement('div');
-      //   dot3.classList.add('loading-dot');
-      //   dot3.textContent = '.'
-      //   dot3.style.animationDelay = '0.5s';
-      //   button.appendChild(dot1);
-      //   button.appendChild(dot2);
-      //   button.appendChild(dot3);
-
-      //   sendEmail();
-      // } else {
-      //   let msg = 'Failed to send message. Here\'s why:\n';
-      //   msg += formData['name'].length === 0 ? '• Name is invalid.\n' : '';
-      //   msg += emailValid ? '' : '• Email is invalid.\n';
-      //   msg += formData['subject'].length === 0 ? '• Subject is empty.\n' : '';
-      //   msg += formData['message'].length === 0 ? '• Message is empty.\n' : '';
-      //   alert(msg);
-      //   console.log(formData)
-      // }
   }
-  const sendEmail = () => {
-    const { submit: onSubmit } = useWeb3Forms({
-      access_key: 'b31ad7a0-559c-43a2-8b3f-7b4b7f4d5b28',
-      settings: {
-        from_name: "Portfolio Site", subject: "New message"
-        // ... other settings
+
+  const submit = async(e) => {
+    e.preventDefault();
+
+    activateLoading();
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method:"POST",
+      headers: {
+        'Content-Type': 'application/json', // Crucial for JSON data
+        'Accept': 'application/json'
       },
-      onSuccess: (msg, data) => {
-        let form = document.querySelector('form').elements;
-        for (let i = 0; i < form.length; i++) {
-          form[i].readOnly = true;
-          form[i].style = 'cursor:default'
-        }
-        let button = document.querySelector('button')
-        button.style = 'background-color: #D45168';
-        button.textContent = 'SENT'
-        document.querySelectorAll('loading-dot').forEach((el) => button.removeChild(el))
-        console.log("Message:", msg);
-        // reset();
-      },
-      onError: (msg, data) => {
-        alert('Failed to send message. Here\'s why: ', error);
-        console.log("Message:", msg);
-        let button = document.querySelector('button')
-        button.classList.add('enabled');
-        button.textContent = ' SEND';
-      },
+      body: JSON.stringify({
+        access_key:formData.access_key,
+        name: formData.name,
+        email: formData.email,
+        message: `Subject: ${formData.subject} | Message: ${formData.message}`
+      })
     });
-    handleSubmit(onSubmit)();
+
+    const data = await res.json();
+
+    if (data.success) {
+      alert("Your message has been received. Thank you for reaching out!");
+      let form = document.querySelector('form').elements;
+      for (let i = 0; i < form.length; i++) {
+        form[i].readOnly = true;
+        form[i].style = 'cursor:default';
+        form[i].disabled = true;
+      }
+      let button = document.querySelector('button')
+      button.style = 'background-color: #D45168';
+      button.textContent = 'SENT'
+      button.disabled = true;
+      document.querySelectorAll('loading-dot').forEach((el) => button.removeChild(el))
+      console.log("Message:", data.message);
+
+    } else {
+      alert("Message not sent due to error: " + data.message);
+      let button = document.querySelector('button')
+      button.textContent = 'SEND'
+      document.querySelectorAll('loading-dot').forEach((el) => button.removeChild(el))
+      console.log("Message:", data);
+    }
   }
 
-  // const { submit } = useWeb3Forms({
-  //   access_key: 'b31ad7a0-559c-43a2-8b3f-7b4b7f4d5b28',
-  //   settings: {
-  //     from_name: formData['name'],
-  //     subject: formData['subject'],
-  //     // ... other settings
-  //   },
-  //   onSuccess: (msg, data) => {
-  //     let form = document.querySelector('form').elements;
-  //     for (let i = 0; i < form.length; i++) {
-  //       form[i].readOnly = true;
-  //       form[i].style = 'cursor:default'
-  //     }
-  //     let button = document.querySelector('button')
-  //     button.style = 'background-color: #D45168';
-  //     button.textContent = 'SENT'
-  //     document.querySelectorAll('loading-dot').forEach((el) => button.removeChild(el))
-  //     console.log("Message:", msg);
-  //     // reset();
-  //   },
-  //   onError: (msg, data) => {
-  //     alert('Failed to send message. Here\'s why: ', error);
-  //     console.log("Message:", msg);
-  //     let button = document.querySelector('button')
-  //     button.classList.add('enabled');
-  //     button.textContent = ' SEND';
-  //   },
-  // });
+  // const submit = (e) => {
+  //   let button = document.querySelector('button')
+  //   button.classList.remove('enabled');
+  //   button.textContent = 'SENDING';
+
+  //   let dot1 = document.createElement('div');
+  //   dot1.classList.add('loading-dot');
+  //   dot1.textContent = '.';
+    
+  //   dot1.style.animationDelay = '0s';
+  //   let dot2 = document.createElement('div');
+  //   dot2.classList.add('loading-dot');
+  //   dot2.textContent = '.'
+  //   dot2.style.animationDelay = '0.25s';
+  //   let dot3 = document.createElement('div');
+  //   dot3.classList.add('loading-dot');
+  //   dot3.textContent = '.'
+  //   dot3.style.animationDelay = '0.5s';
+  //   button.appendChild(dot1);
+  //   button.appendChild(dot2);
+  //   button.appendChild(dot3);
+
+  //   sendEmail();
+  //     // e.preventDefault();
+
+  //     // let valid = true;
+  //     // let emailValid = formData['email'] !== '' && formData['email'].toLowerCase().match(
+  //     //     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  //     // );
+      
+  //     // if (formData['name'].length === 0 || !emailValid || formData['subject'].length === 0 || formData['message'].length === 0) {
+  //     //     valid = false;
+  //     // }
+  //     // console.log(emailValid)
+      
+  //     // if (valid) {
+  //     //   let button = document.querySelector('button')
+  //     //   button.classList.remove('enabled');
+  //     //   button.textContent = 'SENDING';
+
+  //     //   let dot1 = document.createElement('div');
+  //     //   dot1.classList.add('loading-dot');
+  //     //   dot1.textContent = '.';
+        
+  //     //   dot1.style.animationDelay = '0s';
+  //     //   let dot2 = document.createElement('div');
+  //     //   dot2.classList.add('loading-dot');
+  //     //   dot2.textContent = '.'
+  //     //   dot2.style.animationDelay = '0.25s';
+  //     //   let dot3 = document.createElement('div');
+  //     //   dot3.classList.add('loading-dot');
+  //     //   dot3.textContent = '.'
+  //     //   dot3.style.animationDelay = '0.5s';
+  //     //   button.appendChild(dot1);
+  //     //   button.appendChild(dot2);
+  //     //   button.appendChild(dot3);
+
+  //     //   sendEmail();
+  //     // } else {
+  //     //   let msg = 'Failed to send message. Here\'s why:\n';
+  //     //   msg += formData['name'].length === 0 ? '• Name is invalid.\n' : '';
+  //     //   msg += emailValid ? '' : '• Email is invalid.\n';
+  //     //   msg += formData['subject'].length === 0 ? '• Subject is empty.\n' : '';
+  //     //   msg += formData['message'].length === 0 ? '• Message is empty.\n' : '';
+  //     //   alert(msg);
+  //     //   console.log(formData)
+  //     // }
+  // }
+  // const sendEmail = () => {
+  //   const { submit: onSubmit } = useWeb3Forms({
+  //     access_key: 'b31ad7a0-559c-43a2-8b3f-7b4b7f4d5b28',
+  //     settings: {
+  //       from_name: "Portfolio Site", subject: "New message"
+  //       // ... other settings
+  //     },
+  //     onSuccess: (msg, data) => {
+  //       let form = document.querySelector('form').elements;
+  //       for (let i = 0; i < form.length; i++) {
+  //         form[i].readOnly = true;
+  //         form[i].style = 'cursor:default'
+  //       }
+  //       let button = document.querySelector('button')
+  //       button.style = 'background-color: #D45168';
+  //       button.textContent = 'SENT'
+  //       document.querySelectorAll('loading-dot').forEach((el) => button.removeChild(el))
+  //       console.log("Message:", msg);
+  //       // reset();
+  //     },
+  //     onError: (msg, data) => {
+  //       alert('Failed to send message. Here\'s why: ', error);
+  //       console.log("Message:", msg);
+  //       let button = document.querySelector('button')
+  //       button.classList.add('enabled');
+  //       button.textContent = ' SEND';
+  //     },
+  //   });
+  //   handleSubmit(onSubmit)();
+  // }
 
   return <form ref={form} style={{display:'flex', flexDirection:'column'}} onSubmit={submit}>
     {/* <input type="text" placeholder="Name" {...register("name", { required: true })}/>

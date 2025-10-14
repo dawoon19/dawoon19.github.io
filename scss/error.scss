@@ -1,0 +1,42 @@
+.errorPage {
+    width:100vw;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-weight: 300;
+    animation: start 1s ease-in-out;
+}
+
+#icon {
+    font-size:5em;
+}
+.errorPage h4 {
+    margin:0;
+    padding:0;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    font-size:1.25em;
+}
+
+.errorPage h1 {
+    letter-spacing: 0.1em;
+}
+
+.errorPage a {
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    cursor:pointer;
+    transition: font-weight 0.1s linear;
+}
+
+.errorPage a:hover {
+    font-weight: 700;
+}
+
+@keyframes start {
+    from {opacity:0; transform:translateY(100px)}
+    to {opacity:1; transform:translateY(0px)}
+}

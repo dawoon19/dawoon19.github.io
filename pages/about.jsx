@@ -27,12 +27,13 @@ export default function About(props) {
         }
 
         return (
-            <div className={styles.resumeentry}>
-                <div className={styles.resumepos} style={{color:color}}>{position}</div>
-                <div className={styles.resumecompany}>{company}</div>
-                <div className={styles.resumedata}>{years}&nbsp;&nbsp; | &nbsp;&nbsp;{loc}</div> 
-                <div className={styles.toolList}>
-                    {tools.map((tool)=>{return <div className={styles.jobTool}>{tool}</div>})}
+            <div className='resumeentry'>
+                <div className='resumepos' style={{color:color}}>{position}</div>
+                <div className='resumecompany'>{company}</div>
+                {/* <div className='resumedata'>{years}&nbsp;&nbsp; | &nbsp;&nbsp;{loc}</div>  */}
+                <div className='resumedata'>{years}</div> 
+                <div className='toolList'>
+                    {tools.map((tool)=>{return <div key={tool} className='jobTool'>{tool}</div>})}
                 </div>
                 {desc} 
             </div>
@@ -54,7 +55,7 @@ export default function About(props) {
                             <div id='profilepicoverlay' className='profilepicframe'/>
                         </div>
                         <div id='profilesummary'>
-                            I am a product designer and full-stack software engineer with a <a className={styles.devTxt}>Master of Engineering</a> in <a className={styles.devTxt}>Electrical Engineering & Computer Sciences (EECS)</a> from UC Berkeley.
+                            I am a product designer and full-stack software engineer with a <a className='devTxt'>Master of Engineering</a> in <a className='devTxt'>Electrical Engineering & Computer Sciences (EECS)</a> from UC Berkeley.
                             I enjoy building data-driven, human-centered products that enhance user productivity and experience. Great to meet you!
                         </div>
                     </div>
@@ -63,16 +64,16 @@ export default function About(props) {
                         <div className='resumetimelabel'>
                             EXPERIENCE
                         </div>
-                        <div className={styles.resumedivider}/>
-                        <div className={styles.resumejobgroup}>
+                        <div className='resumedivider'/>
+                        <div className='resumejobgroup'>
                             <ResumeEntry position="Full-Stack Software Engineering Intern" company="Bureau of Labor Statistics" start="JUN 2023" end="AUG 2023"
-                                        location="Remote" tools={['React','JavaScript','Express']} jobtype={1}/>
+                                        location="Remote" tools={['React','JavaScript','Express','Node', 'MongoDB','Figma']} jobtype={1}/>
                             <ResumeEntry position="Graphic Designer & Administrative Assistant" company="Berkeley Center for Law and Technology" start="OCT 2021" end="JUN 2023"
                                         location="Berkeley, CA" tools={['Adobe Creative Suite','Salesforce','WordPress','Excel']} jobtype={0}/>
                             <ResumeEntry position="Software Engineering Intern" company="Medtronic" start="JUN 2022" end="AUG 2022" 
-                                        location="Northridge, CA" tools={['Python','Agile Development']} jobtype={1}/>
+                                        location="Northridge, CA" tools={['Python','Google Protocol Buffers','Agile Development']} jobtype={1}/>
                             <ResumeEntry position="Software Engineering Intern" company="Geopogo" start="MAY 2021" end="SEP 2021" 
-                                        location="Berkeley, CA" tools={['Unity','Git','React','Figma']} jobtype={1}/>
+                                        location="Berkeley, CA" tools={['Unity','Git','React','JavaScript','Figma']} jobtype={1}/>
                         </div>
                         
                     </div>

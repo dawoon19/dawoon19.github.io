@@ -6,7 +6,9 @@ $red: #D45168;
 $blue: #629bf0;
 $dark-red: #9F2950;
 $dark-blue: #3B6AB0;
-$page-bg: #0C2848;
+// $page-bg: #0C2848;
+$page-bg:#212C38;
+$page-content: white;
 
 // GENERAL STYLING
 html,body {
@@ -57,7 +59,7 @@ h1 {
     overflow-x:hidden;
     overflow-y:auto;
     flex-direction: column;
-    background-color: #0C2848;
+    background-color: $page-bg;
 }
 
 input {

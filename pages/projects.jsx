@@ -44,7 +44,6 @@ export default function GeneralProjects() {
                 break;
         }
         var delay = String(props.projtype*2) + 's';
-        console.log('delay: ', delay)
 
         return (
             <div className='box-container' id={animId}>
@@ -67,7 +66,7 @@ export default function GeneralProjects() {
                 </div>
                 <div className='highlightcontainer'>
                     {data.map((project, idx)=> {
-                        return <Highlight right={idx % 2 == 1} data={project}/>
+                        return <Highlight key={`proj${idx}`} right={idx % 2 == 1} data={project}/>
                     } )}
                     {/* <Highlight/>
                     <Highlight right={true}/> */}

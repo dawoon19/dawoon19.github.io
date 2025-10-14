@@ -14,13 +14,13 @@ export default function ProjectPage() {
         return <></>;
     }
     return (
-        <div className={styles.projectpage}>
-            <div className={styles.textContainer}>
+        <div className='projectpage'>
+            <div className='textContainer'>
                 <span>
                     MY <a>DESIGN</a> WORK
                 </span>
             </div>
-            <div className={styles.cardContainer}>
+            <div className='cardContainer'>
                 <Projects/>
             </div>
         </div>

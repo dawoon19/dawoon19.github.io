@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Tera:wght@100..900&family=Overpass+Mono:wght@300..700&display=swap");
 html, body {
-  background-color: #0C2848;
+  background-color: #212C38;
   padding: 0;
   margin: 0;
   font-family: "Overpass Mono", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -45,7 +45,7 @@ h1 {
   overflow-x: hidden;
   overflow-y: auto;
   flex-direction: column;
-  background-color: #0C2848;
+  background-color: #212C38;
 }
 
 input {
@@ -249,7 +249,7 @@ a {
   -ms-backdrop-filter: blur(10px);
   -o-backdrop-filter: blur(10px);
   transform: translateX(100vw);
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.25s ease-out;
   z-index: 5;
 }
 
@@ -306,6 +306,7 @@ a {
     justify-content: center;
     align-items: center;
     color: white;
+    font-family: "Lexend Tera";
     z-index: 10;
   }
   .menuiconbar {
@@ -317,7 +318,7 @@ a {
 }
 .body {
   position: absolute;
-  background-color: #0C2848;
+  background-color: #212C38;
   /* color: #52667C; */
   /* background-color: #EBF0F6; */
   color: white;
@@ -725,7 +726,7 @@ HIGHLIGHTS
 }
 .highlightSideText button {
   background-color: white;
-  color: #0C2848;
+  color: #212C38;
   width: 50%;
   min-width: 300px;
   margin: 0;
@@ -823,7 +824,7 @@ HIGHLIGHTS
 }
 .projectpage {
   position: relative;
-  background-color: #0C2848;
+  background-color: #212C38;
   color: white;
   width: 100vw;
   height: 100vh;
@@ -896,7 +897,6 @@ HIGHLIGHTS
 .casestudy-page section {
   margin: 0;
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -916,11 +916,71 @@ HIGHLIGHTS
 }
 
 #casestudy-intro {
-  background-image: linear-gradient(to bottom, rgba(12, 40, 72, 0), #0C2848), linear-gradient(to bottom left, rgba(212, 81, 104, 0.5), rgba(59, 106, 176, 0.5), rgba(59, 106, 176, 0));
+  background-image: linear-gradient(to bottom, rgba(33, 44, 56, 0), #212C38), linear-gradient(to bottom left, rgba(212, 81, 104, 0.5), rgba(59, 106, 176, 0.5), rgba(59, 106, 176, 0));
+  height: 100vh;
 }
 
 #casestudyctr-intro > * {
   opacity: 0;
+}
+#casestudyctr-intro h3 {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.casestudyskill-section {
+  margin-top: 15px;
+}
+.casestudyskill-section > * {
+  margin: 0;
+}
+
+.casestudyskills {
+  display: flex;
+}
+
+.casestudyskill-stack {
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.casestudyskill-stack h4 {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.casestudyskillsctr {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  height: auto;
+}
+.casestudyskillsctr > * {
+  margin: 14px;
+}
+
+.casestudyskillitem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.casestudyskillitem p {
+  position: absolute;
+  transform: translateY(25px);
+  display: none;
+  z-index: 0;
+}
+.casestudyskillitem > *:first-child {
+  margin: 0;
+  transform: scale(0.9);
+  transition: transform 0.1s ease-in-out;
+  z-index: 5;
+}
+.casestudyskillitem > *:first-child:hover {
+  transform: scale(1.1);
+}
+.casestudyskillitem > *:first-child:hover + p {
+  display: block;
 }
 
 .casestudy-container {
@@ -935,13 +995,7 @@ HIGHLIGHTS
   text-align: center;
 }
 .casestudy-container > * {
-  opacity: 1;
-  transform: translateY(0px);
-}
-.casestudy-container.invisible > * {
   opacity: 0;
-  transform: translateY(50px);
-  filter: blur(25px);
 }
 .casestudy-container h1 {
   text-align: center;
@@ -965,8 +1019,7 @@ HIGHLIGHTS
 }
 .casestudy-container ul {
   font-size: 0.75rem;
-  text-align: left;
-  width: 70%;
+  max-width: 500px;
 }
 
 .problem {
@@ -983,10 +1036,10 @@ HIGHLIGHTS
 }
 
 #casestudy-problems {
-  background-color: #0C2848;
+  background-color: #212C38;
   background-image: linear-gradient(to top, #9F2950, rgba(159, 41, 80, 0.5));
   height: auto;
-  padding-top: 100px;
+  padding-top: 150px;
   padding-bottom: 100px;
   justify-content: flex-start;
   clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0, 50% 10%);
@@ -1021,6 +1074,36 @@ HIGHLIGHTS
   opacity: 1;
 }
 
+#casestudy-solutions {
+  background-image: linear-gradient(to top, rgba(33, 44, 56, 0), #212C38), linear-gradient(to bottom left, rgba(212, 81, 104, 0.5), rgba(59, 106, 176, 0.5), rgba(59, 106, 176, 0));
+  justify-content: flex-start;
+}
+
+#casestudyctr-solutions {
+  justify-content: flex-start;
+  height: auto;
+}
+#casestudyctr-solutions h3 {
+  color: #629bf0;
+  font-weight: 700;
+}
+#casestudyctr-solutions h4 {
+  margin: 0;
+  margin-bottom: 15px;
+}
+#casestudyctr-solutions p {
+  opacity: 0.5;
+  width: 70%;
+  margin: 0;
+}
+
+.solution {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @media screen and (max-width: 1000px) {
   #casestudy-problems {
     clip-path: polygon(100% 0, 100% 95%, 50% 100%, 0 95%, 0 0, 50% 5%);
@@ -1041,6 +1124,13 @@ HIGHLIGHTS
   }
   .casestudy-page ul {
     min-width: 250px;
+    text-align: left;
+  }
+  .casestudyskills {
+    flex-direction: column;
+  }
+  .casestudyskill-section {
+    display: none;
   }
 }
 @media screen and (max-width: 500px) {
@@ -1186,11 +1276,17 @@ HIGHLIGHTS
 .resumepos {
   font-weight: 700;
   font-size: 1.2em;
+  text-transform: uppercase;
+  font-family: "Lexend Tera";
+  letter-spacing: 0;
+  max-width: 480px;
 }
 
 .resumecompany {
   font-weight: 500;
   font-size: 0.9em;
+  text-transform: uppercase;
+  opacity: 0.5;
 }
 
 .resumedata {
@@ -1220,7 +1316,7 @@ HIGHLIGHTS
 }
 
 .jobTool:hover {
-  color: #0C2848;
+  color: #212C38;
   background-color: white;
 }
 
@@ -1397,6 +1493,55 @@ button {
     width: 250px;
     height: 250px;
     font-size: 1.1rem;
+  }
+}
+.errorPage {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 300;
+  animation: start 1s ease-in-out;
+}
+
+#icon {
+  font-size: 5em;
+}
+
+.errorPage h4 {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  font-size: 1.25em;
+}
+
+.errorPage h1 {
+  letter-spacing: 0.1em;
+}
+
+.errorPage a {
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: font-weight 0.1s linear;
+}
+
+.errorPage a:hover {
+  font-weight: 700;
+}
+
+@keyframes start {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
 .card {
